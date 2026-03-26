@@ -4,5 +4,14 @@
   "homeMaintenance": "Mantenimiento",
   "homeParameters": "Parámetros",
   "homeProblems": "Problemas",
-  "homeTips": "Consejos"
+  "homeTips": "Consejos",
+  "homeConfiguration": "Configuración",
+  "description": "Mantenimiento inteligente",
+  "homePools": "Mis piscinas",
+  "language": "Idioma",
+  "versionNumber": "v0.0.1 - Pool Solver",
+  "light": "Claro",
+  "dark": "Oscuro",
+  "auto": "Auto",
+  "version": "Versión"
 }

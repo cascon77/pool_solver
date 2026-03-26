@@ -22,4 +22,31 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get homeTips => 'Tips';
+
+  @override
+  String get homeConfiguration => 'Configuration';
+
+  @override
+  String get description => 'Intelligent maintenance';
+
+  @override
+  String get homePools => 'My pools';
+
+  @override
+  String get language => 'Language';
+
+  @override
+  String get version => 'Version';
+
+  @override
+  String get versionNumber => 'v0.0.1 - Pool Solver';
+
+  @override
+  String get light => 'Light';
+
+  @override
+  String get dark => 'Dark';
+
+  @override
+  String get auto => 'Auto';
 }

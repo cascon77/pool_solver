@@ -22,4 +22,31 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get homeTips => 'Consejos';
+
+  @override
+  String get homeConfiguration => 'Configuración';
+
+  @override
+  String get description => 'Mantenimiento inteligente';
+
+  @override
+  String get homePools => 'Mis piscinas';
+
+  @override
+  String get language => 'Idioma';
+
+  @override
+  String get version => 'Versión';
+
+  @override
+  String get versionNumber => 'v0.0.1 - Pool Solver';
+
+  @override
+  String get light => 'Claro';
+
+  @override
+  String get dark => 'Oscuro';
+
+  @override
+  String get auto => 'Auto';
 }

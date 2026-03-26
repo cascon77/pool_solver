@@ -15,8 +15,6 @@ class AppTheme {
         onSecondary: Colors.white,
         error: AppColors.danger,
         onError: Colors.white,
-        background: AppColors.backgroundLight,
-        onBackground: AppColors.textPrimary,
         surface: AppColors.surfaceLight,
         onSurface: AppColors.textPrimary,
       ),
@@ -62,8 +60,6 @@ class AppTheme {
         onSecondary: Colors.white,
         error: AppColors.danger,
         onError: Colors.black,
-        background: AppColors.backgroundDark,
-        onBackground: Colors.white,
         surface: AppColors.surfaceDark,
         onSurface: Colors.white,
       ),
@@ -71,9 +67,10 @@ class AppTheme {
       scaffoldBackgroundColor: AppColors.backgroundDark,
 
       appBarTheme: const AppBarTheme(
-        backgroundColor: AppColors.backgroundDark,
+        backgroundColor: AppColors.surfaceDark,
         foregroundColor: Colors.white,
-        elevation: 0,
+        elevation: 1,
+        shadowColor: Colors.black45,
       ),
 
       cardTheme:CardThemeData(

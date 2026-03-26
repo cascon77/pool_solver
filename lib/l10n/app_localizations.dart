@@ -124,6 +124,60 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Tips'**
   String get homeTips;
+
+  /// No description provided for @homeConfiguration.
+  ///
+  /// In en, this message translates to:
+  /// **'Configuration'**
+  String get homeConfiguration;
+
+  /// No description provided for @description.
+  ///
+  /// In en, this message translates to:
+  /// **'Intelligent maintenance'**
+  String get description;
+
+  /// No description provided for @homePools.
+  ///
+  /// In en, this message translates to:
+  /// **'My pools'**
+  String get homePools;
+
+  /// No description provided for @language.
+  ///
+  /// In en, this message translates to:
+  /// **'Language'**
+  String get language;
+
+  /// No description provided for @version.
+  ///
+  /// In en, this message translates to:
+  /// **'Version'**
+  String get version;
+
+  /// No description provided for @versionNumber.
+  ///
+  /// In en, this message translates to:
+  /// **'v0.0.1 - Pool Solver'**
+  String get versionNumber;
+
+  /// No description provided for @light.
+  ///
+  /// In en, this message translates to:
+  /// **'Light'**
+  String get light;
+
+  /// No description provided for @dark.
+  ///
+  /// In en, this message translates to:
+  /// **'Dark'**
+  String get dark;
+
+  /// No description provided for @auto.
+  ///
+  /// In en, this message translates to:
+  /// **'Auto'**
+  String get auto;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

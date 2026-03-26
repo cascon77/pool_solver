@@ -1,0 +1,1 @@
+export 'package:pool_solution/core/widgets/common/lateral_menu.dart';

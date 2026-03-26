@@ -4,6 +4,15 @@
   "homeMaintenance": "Maintenance",
   "homeParameters": "Parameters",
   "homeProblems": "Problems",
-  "homeTips": "Tips"
+  "homeTips": "Tips",
+  "homeConfiguration": "Configuration",
+  "description": "Intelligent maintenance",
+  "homePools": "My pools",
+  "language": "Language",
+  "version": "Version",
+  "versionNumber": "v0.0.1 - Pool Solver",
+  "light": "Light",
+  "dark": "Dark",
+  "auto": "Auto"
 
 }
