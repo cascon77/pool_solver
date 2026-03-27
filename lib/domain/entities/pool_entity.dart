@@ -1,22 +1,22 @@
 
+import 'enums.dart';
+
 class PoolEntity {
   int? id;
-  String name;
-  double volume_liters;
-  String water_type;
-  String filter_type;
+  String? name;
+  double? volumeLiters;
+  WaterType? waterType;
+  FilterType? filterType;
   String? shape;
-  DateTime? created_at;
+  DateTime? createdAt;
 
   PoolEntity({
     this.id,
-    required this.name,
-    required this.volume_liters,
-    required this.water_type,
-    required this.filter_type,
+    this.name,
+    this.volumeLiters,
+    this.waterType,
+    this.filterType,
     this.shape,
-    this.created_at
+    this.createdAt
   });
-
-
 }
