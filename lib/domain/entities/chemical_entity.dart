@@ -1,5 +1,6 @@
-import 'enums.dart';
-import 'chemical_type.dart';
+
+import 'package:pool_solution/domain/entities/chemical_type.dart';
+import 'package:pool_solution/domain/entities/enums.dart';
 
 class ChemicalEntity {
   int? id;

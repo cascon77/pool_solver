@@ -1,12 +1,16 @@
-import 'enums.dart';
-import 'pool_entity.dart';
-import 'problem_entity.dart';
-import 'measurement_entity.dart';
+
+import 'package:pool_solution/domain/entities/chemical_entity.dart';
+import 'package:pool_solution/domain/entities/enums.dart';
+import 'package:pool_solution/domain/entities/measurement_entity.dart';
+import 'package:pool_solution/domain/entities/pool_entity.dart';
+import 'package:pool_solution/domain/entities/problem_entity.dart';
 
 class TreatmentEntity {
   int? id;
   int? poolId;
   PoolEntity? pool;
+  int? chemicalId;
+  ChemicalEntity? chemical;
   DateTime? date;
   int? problemId;
   ProblemEntity? problem;
@@ -20,6 +24,8 @@ class TreatmentEntity {
     this.id,
     this.poolId,
     this.pool,
+    this.chemicalId,
+    this.chemical,
     this.date,
     this.problemId,
     this.problem,
@@ -34,6 +40,8 @@ class TreatmentEntity {
     int? id,
     int? poolId,
     PoolEntity? pool,
+    int? chemicalId,
+    ChemicalEntity? chemical,
     DateTime? date,
     int? problemId,
     ProblemEntity? problem,
@@ -47,6 +55,8 @@ class TreatmentEntity {
       id: id ?? this.id,
       poolId: poolId ?? this.poolId,
       pool: pool ?? this.pool,
+      chemicalId: chemicalId ?? this.chemicalId,
+      chemical: chemical ?? this.chemical,
       date: date ?? this.date,
       problemId: problemId ?? this.problemId,
       problem: problem ?? this.problem,
@@ -64,6 +74,10 @@ class TreatmentEntity {
       poolId: json['poolId'] as int?,
       pool: json['pool'] != null
           ? PoolEntity.fromJson(json['pool'] as Map<String, dynamic>)
+          : null,
+      chemicalId: json['chemicalId'] as int?,
+      chemical: json['chemical'] != null
+          ? ChemicalEntity.fromJson(json['chemical'] as Map<String, dynamic>)
           : null,
       date: json['date'] != null ? DateTime.parse(json['date'] as String) : null,
       problemId: json['problemId'] as int?,
@@ -88,6 +102,8 @@ class TreatmentEntity {
       'id': id,
       'poolId': poolId,
       'pool': pool?.toJson(),
+      'chemicalId': chemicalId,
+      'chemical': chemical?.toJson(),
       'date': date?.toIso8601String(),
       'problemId': problemId,
       'problem': problem?.toJson(),

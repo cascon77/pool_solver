@@ -1,4 +1,5 @@
-import 'pool_entity.dart';
+
+import 'package:pool_solution/domain/entities/pool_entity.dart';
 
 class MeasurementEntity {
   int? id;

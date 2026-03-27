@@ -1,4 +1,5 @@
-import 'problem_entity.dart';
+
+import 'package:pool_solution/domain/entities/problem_entity.dart';
 
 class ProblemStepEntity {
   int? id;
