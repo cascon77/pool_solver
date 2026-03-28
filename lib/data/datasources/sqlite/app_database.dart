@@ -75,6 +75,7 @@ class Problems extends Table {
   TextColumn get name => text().nullable()();
   TextColumn get description => text().nullable()();
   TextColumn get category => text().nullable()();
+  TextColumn get languageCode => text().withDefault(const Constant('es'))(); // Idioma base (default: español)
 }
 
 @UseRowClass(ProblemStepEntity)
@@ -85,6 +86,7 @@ class ProblemSteps extends Table {
   TextColumn get title => text().nullable()();
   TextColumn get description => text().nullable()();
   BoolColumn get requiresCalculation => boolean().nullable()();
+  TextColumn get languageCode => text().withDefault(const Constant('es'))(); // Idioma base (default: español)
 }
 
 @UseRowClass(TreatmentEntity)
@@ -109,13 +111,13 @@ class Treatments extends Table {
   Measurements,
   Problems,
   ProblemSteps,
-  Treatments
+  Treatments,
 ])
 class AppDatabase extends _$AppDatabase {
   AppDatabase() : super(_openConnection());
 
   @override
-  int get schemaVersion => 1;
+  int get schemaVersion => 2;
 }
 
 LazyDatabase _openConnection() {

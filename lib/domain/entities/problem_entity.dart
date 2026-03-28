@@ -3,12 +3,14 @@ class ProblemEntity {
   String? name;
   String? description;
   String? category;
+  String? languageCode;  // Idioma del contenido ('es', 'en', 'fr', etc.)
 
   ProblemEntity({
     this.id,
     this.name,
     this.description,
     this.category,
+    this.languageCode,
   });
 
   ProblemEntity copyWith({
@@ -16,12 +18,14 @@ class ProblemEntity {
     String? name,
     String? description,
     String? category,
+    String? languageCode,
   }) {
     return ProblemEntity(
       id: id ?? this.id,
       name: name ?? this.name,
       description: description ?? this.description,
       category: category ?? this.category,
+      languageCode: languageCode ?? this.languageCode,
     );
   }
 
@@ -31,6 +35,7 @@ class ProblemEntity {
       name: json['name'] as String?,
       description: json['description'] as String?,
       category: json['category'] as String?,
+      languageCode: json['languageCode'] as String?,
     );
   }
 
@@ -40,6 +45,7 @@ class ProblemEntity {
       'name': name,
       'description': description,
       'category': category,
+      'languageCode': languageCode,
     };
   }
 }

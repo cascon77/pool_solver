@@ -9,6 +9,7 @@ class ProblemStepEntity {
   String? title;
   String? description;
   bool? requiresCalculation;
+  String? languageCode;  // Idioma del contenido ('es', 'en', 'fr', etc.)
 
   ProblemStepEntity({
     this.id,
@@ -18,6 +19,7 @@ class ProblemStepEntity {
     this.title,
     this.description,
     this.requiresCalculation,
+    this.languageCode,
   });
 
   ProblemStepEntity copyWith({
@@ -28,6 +30,7 @@ class ProblemStepEntity {
     String? title,
     String? description,
     bool? requiresCalculation,
+    String? languageCode,
   }) {
     return ProblemStepEntity(
       id: id ?? this.id,
@@ -37,6 +40,7 @@ class ProblemStepEntity {
       title: title ?? this.title,
       description: description ?? this.description,
       requiresCalculation: requiresCalculation ?? this.requiresCalculation,
+      languageCode: languageCode ?? this.languageCode,
     );
   }
 
@@ -51,6 +55,7 @@ class ProblemStepEntity {
       title: json['title'] as String?,
       description: json['description'] as String?,
       requiresCalculation: json['requiresCalculation'] as bool?,
+      languageCode: json['languageCode'] as String?,
     );
   }
 
@@ -63,6 +68,7 @@ class ProblemStepEntity {
       'title': title,
       'description': description,
       'requiresCalculation': requiresCalculation,
+      'languageCode': languageCode,
     };
   }
 }

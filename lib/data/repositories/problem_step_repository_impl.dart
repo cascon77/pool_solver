@@ -10,8 +10,10 @@ class ProblemStepRepositoryImpl implements ProblemStepRepository {
   ProblemStepRepositoryImpl(this.db);
 
   @override
-  Future<List<ProblemStepEntity>> getAllProblemSteps() async {
-    return await db.select(db.problemSteps).get();
+  Future<List<ProblemStepEntity>> getAllProblemSteps(String languageCode) async {
+    return await (db.select(db.problemSteps)
+          ..where((t) => t.languageCode.equals(languageCode)))
+        .get();
   }
 
   @override
@@ -27,6 +29,7 @@ class ProblemStepRepositoryImpl implements ProblemStepRepository {
       title: Value(step.title),
       description: Value(step.description),
       requiresCalculation: Value(step.requiresCalculation),
+      languageCode: Value(step.languageCode ?? 'es'),
     ));
   }
 
@@ -39,6 +42,7 @@ class ProblemStepRepositoryImpl implements ProblemStepRepository {
       title: Value(step.title),
       description: Value(step.description),
       requiresCalculation: Value(step.requiresCalculation),
+      languageCode: Value(step.languageCode ?? 'es'),
     ));
   }
 
@@ -49,16 +53,16 @@ class ProblemStepRepositoryImpl implements ProblemStepRepository {
   }
 
   @override
-  Future<List<ProblemStepEntity>> getByProblemId(int problemId) async {
+  Future<List<ProblemStepEntity>> getByProblemId(int problemId, String languageCode) async {
     return await (db.select(db.problemSteps)
-          ..where((t) => t.problemId.equals(problemId))
+          ..where((t) => t.problemId.equals(problemId) & t.languageCode.equals(languageCode))
           ..orderBy([(t) => OrderingTerm(expression: t.stepOrder)]))
         .get();
   }
 
   @override
-  Future<List<ProblemStepEntity>> searchByMultipleCriteria(SearchFilter filter) async {
-    var query = db.select(db.problemSteps);
+  Future<List<ProblemStepEntity>> searchByMultipleCriteria(SearchFilter filter, String languageCode) async {
+    var query = db.select(db.problemSteps)..where((t) => t.languageCode.equals(languageCode));
 
     if (filter.foreignKeyId != null) {
       query = query..where((t) => t.problemId.equals(filter.foreignKeyId!));
@@ -69,5 +73,21 @@ class ProblemStepRepositoryImpl implements ProblemStepRepository {
     }
 
     return await query.get();
+  }
+
+  @override
+  Future<ProblemStepEntity?> getByIdAndLanguage(int stepId, String languageCode) async {
+    return await (db.select(db.problemSteps)
+          ..where((t) => t.id.equals(stepId) & t.languageCode.equals(languageCode)))
+        .getSingleOrNull();
+  }
+
+  @override
+  Future<List<String>> getAvailableLanguagesForStep(int stepId) async {
+    final steps = await (db.select(db.problemSteps, distinct: true)
+          ..where((t) => t.id.equals(stepId)))
+        .get();
+    
+    return steps.map((s) => s.languageCode ?? 'es').toList();
   }
 }
