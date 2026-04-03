@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:pool_solution/domain/entities/entities.dart';
+import 'package:pool_solution/l10n/app_localizations.dart';
 import 'package:pool_solution/presentation/providers/pool_provider.dart';
-import 'package:pool_solution/l10n/app_localizations.dart';
-import 'package:pool_solution/l10n/app_localizations.dart';
 
 class NewPoolScreen extends ConsumerStatefulWidget {
   final PoolEntity? pool;

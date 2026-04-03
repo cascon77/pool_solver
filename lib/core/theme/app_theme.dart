@@ -13,8 +13,6 @@ class AppTheme {
         error: AppColors.danger,
         surface: AppColors.surfaceLight,
         onSurface: AppColors.textPrimary,
-        background: AppColors.backgroundLight,
-        onBackground: AppColors.textPrimary,
       ),
       scaffoldBackgroundColor: AppColors.backgroundLight,
       appBarTheme: const AppBarTheme(
@@ -53,8 +51,6 @@ class AppTheme {
         onSecondary: Colors.white,
         surface: AppColors.surfaceDark,
         onSurface: AppColors.textPrimaryDark,
-        background: AppColors.backgroundDark,
-        onBackground: AppColors.textPrimaryDark,
         error: AppColors.danger,
       ),
       scaffoldBackgroundColor: AppColors.backgroundDark,
