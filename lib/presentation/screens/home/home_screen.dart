@@ -1,9 +1,11 @@
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
 import 'package:pool_solution/core/widgets/common/common.dart';
 import 'package:pool_solution/l10n/app_localizations.dart';
 import 'package:pool_solution/presentation/providers/pool_provider.dart';
-import 'package:pool_solution/presentation/screens/home/new_pool_screen.dart';
+import 'package:pool_solution/routes/routes.dart';
 
 class HomeScreen extends ConsumerWidget {
   const HomeScreen({super.key});
@@ -47,10 +49,9 @@ class HomeScreen extends ConsumerWidget {
             itemBuilder: (context, index) {
               return GestureDetector(
                 onTap: () {
-                  Navigator.of(context).push(
-                    MaterialPageRoute(
-                      builder: (context) => NewPoolScreen(pool: pools[index]),
-                    ),
+                  context.pushNamed(
+                    Routes.poolSetup,
+                    extra: pools[index],
                   );
                 },
                 onLongPress: () {
@@ -66,10 +67,9 @@ class HomeScreen extends ConsumerWidget {
                               title: Text(l10n.edit),
                               onTap: () {
                                 Navigator.of(context).pop();
-                                Navigator.of(context).push(
-                                  MaterialPageRoute(
-                                    builder: (context) => NewPoolScreen(pool: pools[index]),
-                                  ),
+                                context.pushNamed(
+                                  Routes.newPool,
+                                  extra: pools[index],
                                 );
                               },
                             ),
@@ -141,11 +141,7 @@ class HomeScreen extends ConsumerWidget {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          Navigator.of(context).push(
-            MaterialPageRoute(
-              builder: (context) => const NewPoolScreen(),
-            ),
-          );
+          context.pushNamed(Routes.newPool);
         },
         child: const Icon(Icons.add),
       ),
