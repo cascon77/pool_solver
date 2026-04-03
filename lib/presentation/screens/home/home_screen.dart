@@ -16,7 +16,7 @@ class HomeScreen extends ConsumerWidget {
     final poolsAsync = ref.watch(poolsListProvider);
 
     return Scaffold(
-      drawer: LateralMenu(),
+      drawer: LateralHomeMenu(),
       appBar: AppBar(title: Text(l10n.appTitle)),
       body: poolsAsync.when(
         data: (pools) {

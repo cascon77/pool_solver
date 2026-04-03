@@ -44,7 +44,6 @@ class _TipsScreenState extends ConsumerState<TipsScreen> {
           ),
         ],
       ),
-      drawer: LateralMenu(),
       body: SafeArea(
         child: Column(
           children: [

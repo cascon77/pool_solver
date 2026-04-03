@@ -138,5 +138,11 @@
   "english": "English",
   "apply": "Aplicar",
   "liters": " L",
-  "notAvailable": "N/A"
+  "notAvailable": "N/A",
+  "calculator": "Calculadora",
+  "problems": "Problemas",
+  "maintenance": "Mantenimiento",
+  "parameters": "Parámetros",
+  "inventory": "Inventario",
+  "history": "Historial"
 }

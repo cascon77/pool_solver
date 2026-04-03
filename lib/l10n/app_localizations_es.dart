@@ -424,4 +424,22 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get notAvailable => 'N/A';
+
+  @override
+  String get calculator => 'Calculadora';
+
+  @override
+  String get problems => 'Problemas';
+
+  @override
+  String get maintenance => 'Mantenimiento';
+
+  @override
+  String get parameters => 'Parámetros';
+
+  @override
+  String get inventory => 'Inventario';
+
+  @override
+  String get history => 'Historial';
 }
