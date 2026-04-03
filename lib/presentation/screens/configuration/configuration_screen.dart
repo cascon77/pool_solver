@@ -93,10 +93,10 @@ class ConfigurationScreen extends ConsumerWidget {
   }
 
   Widget _buildLanguageDropdown(BuildContext context, WidgetRef ref, Locale currentLocale, bool isDark) {
+    final l10n = AppLocalizations.of(context)!;
     final Map<String, String> languages = {
-      'es': 'Español',
-      'en': 'English',
-
+      'es': l10n.spanish,
+      'en': l10n.english,
     };
 
     return Container(

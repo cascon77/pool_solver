@@ -1,5 +1,5 @@
 
-import 'package:pool_solution/domain/entities/chemical_entity.dart';
+import 'package:pool_solution/domain/entities/entities.dart';
 
 class InventoryEntity {
   int? id;

@@ -1,5 +1,5 @@
 
-import 'package:pool_solution/domain/entities/enums.dart';
+import 'package:pool_solution/domain/entities/entities.dart';
 
 class PoolEntity {
   int? id;

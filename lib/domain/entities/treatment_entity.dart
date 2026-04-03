@@ -1,9 +1,5 @@
 
-import 'package:pool_solution/domain/entities/chemical_entity.dart';
-import 'package:pool_solution/domain/entities/enums.dart';
-import 'package:pool_solution/domain/entities/measurement_entity.dart';
-import 'package:pool_solution/domain/entities/pool_entity.dart';
-import 'package:pool_solution/domain/entities/problem_entity.dart';
+import 'package:pool_solution/domain/entities/entities.dart';
 
 class TreatmentEntity {
   int? id;

@@ -57,19 +57,19 @@ class LateralMenu extends StatelessWidget {
             context,
             icon: Icons.home_rounded,
             title: l10n.homePools,
-            onTap: () => Navigator.pop(context),
+            onTap: () {
+              Navigator.pop(context);
+              context.pushReplacement('/');
+            },
           ),
           _buildMenuItem(
             context,
-            icon: Icons.history_rounded,
-            title: 'Historial Global',
-            onTap: () {},
-          ),
-          _buildMenuItem(
-            context,
-            icon: Icons.school_rounded,
-            title: 'Curso de Piscinas',
-            onTap: () {},
+            icon: Icons.tips_and_updates,
+            title: l10n.homeTips,
+            onTap: () {
+              Navigator.pop(context);
+              context.pushReplacement('/tips');
+            },
           ),
           const Divider(indent: 20, endIndent: 20),
           _buildMenuItem(
