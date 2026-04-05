@@ -1,0 +1,191 @@
+{
+  "chloramines": {
+    "es": {
+      "description": "Las cloraminas aparecen cuando el cloro se combina con suciedad.",
+      "procedure": [
+        {"step": 1, "title": "Medir valores iniciales", "explication": "Mide pH, cloro libre y total antes de añadir productos."},
+        {"step": 2, "title": "Calcular cloraminas", "explication": "Resta cloro libre al total."},
+        {"step": 3, "title": "Añadir cloro shock", "explication": "Añade 10 veces el valor de cloraminas (por la noche)."},
+        {"step": 4, "title": "Filtrar", "explication": "Filtra 24h continuas tras añadir el cloro."},
+        {"step": 5, "title": "Limpiar filtro", "explication": "Arena/vidrio: BACKWASH 2-3 min hasta agua transparente + RINSE 30s–2min. Cartucho: limpiar con manguera."},
+        {"step": 6, "title": "Medición de control", "explication": "Mide nuevamente tras 8–24h. Una vez cloro <3 ppm, ya se puede bañar."}
+      ]
+    },
+    "en": {
+      "description": "Chloramines appear when chlorine combines with dirt.",
+      "procedure": [
+        {"step": 1, "title": "Measure initial values", "explication": "Measure pH, free chlorine, and total chlorine before adding products."},
+        {"step": 2, "title": "Calculate chloramines", "explication": "Subtract free chlorine from total chlorine."},
+        {"step": 3, "title": "Add shock chlorine", "explication": "Add 10 times the chloramine value (at night)."},
+        {"step": 4, "title": "Filter", "explication": "Filter continuously for 24 hours after adding chlorine."},
+        {"step": 5, "title": "Clean filter", "explication": "Sand/Glass: BACKWASH 2-3 min until water is clear + RINSE 30s–2min. Cartridge: clean with hose."},
+        {"step": 6, "title": "Control measurement", "explication": "Measure again after 8–24 hours. Once chlorine <3 ppm, pool is safe to swim."}
+      ]
+    }
+  },
+
+  "green_water": {
+    "low": {
+      "es": {
+        "procedure": [
+          {"step": 1, "title": "Medir valores iniciales", "explication": "Medir pH y cloro antes de actuar."},
+          {"step": 2, "title": "Ajustar pH", "explication": "Ajustar pH a 7.2-7.4."},
+          {"step": 3, "title": "Cepillado", "explication": "Cepillar paredes y suelo para soltar las algas."},
+          {"step": 4, "title": "Añadir cloro shock", "explication": "Añadir cloro hasta 10 ppm."},
+          {"step": 5, "title": "Filtrar", "explication": "Filtrar durante 24 horas seguidas."},
+          {"step": 6, "title": "Limpiar filtro", "explication": "Arena/vidrio: BACKWASH 2-3 min + RINSE 30s–2min. Cartucho: limpiar con manguera."},
+          {"step": 7, "title": "Medición de control", "explication": "Volver a medir valores de pH y cloro."}
+        ]
+      },
+      "en": {
+        "procedure": [
+          {"step": 1, "title": "Measure initial values", "explication": "Measure pH and chlorine before taking action."},
+          {"step": 2, "title": "Adjust pH", "explication": "Adjust pH to 7.2–7.4."},
+          {"step": 3, "title": "Brushing", "explication": "Brush walls and floor to loosen algae."},
+          {"step": 4, "title": "Add shock chlorine", "explication": "Add chlorine up to 10 ppm."},
+          {"step": 5, "title": "Filter", "explication": "Filter continuously for 24 hours."},
+          {"step": 6, "title": "Clean filter", "explication": "Sand/Glass: BACKWASH 2-3 min + RINSE 30s–2min. Cartridge: hose clean."},
+          {"step": 7, "title": "Control measurement", "explication": "Measure pH and chlorine again."}
+        ]
+      }
+    },
+    "medium": {
+      "es": {
+        "procedure": [
+          {"step": 1, "title": "Medir valores iniciales", "explication": "Medir pH y cloro."},
+          {"step": 2, "title": "Ajustar pH", "explication": "Ajustar pH correctamente."},
+          {"step": 3, "title": "Cepillado", "explication": "Cepillar toda la piscina."},
+          {"step": 4, "title": "Añadir cloro shock", "explication": "Añadir cloro fuerte (12-15 ppm)."},
+          {"step": 5, "title": "Filtrar", "explication": "Filtrar 24h continuas."},
+          {"step": 6, "title": "Limpieza del filtro durante el proceso", "explication": "Limpiar filtro cada 12-24h. Arena/vidrio: BACKWASH 2-3 min + RINSE 30s–2min. Cartucho: limpiar con manguera."},
+          {"step": 7, "title": "Añadir floculante", "explication": "Añadir floculante si sigue turbia."},
+          {"step": 8, "title": "Reposar y aspirar", "explication": "Dejar reposar y luego aspirar a desagüe."}
+        ]
+      },
+      "en": {
+        "procedure": [
+          {"step": 1, "title": "Measure initial values", "explication": "Measure pH and chlorine."},
+          {"step": 2, "title": "Adjust pH", "explication": "Correctly adjust pH."},
+          {"step": 3, "title": "Brushing", "explication": "Brush the entire pool."},
+          {"step": 4, "title": "Add shock chlorine", "explication": "Add strong chlorine (12–15 ppm)."},
+          {"step": 5, "title": "Filter", "explication": "Filter continuously for 24 hours."},
+          {"step": 6, "title": "Clean filter during process", "explication": "Clean filter every 12–24h. Sand/Glass: BACKWASH 2–3 min + RINSE 30s–2min. Cartridge: hose clean."},
+          {"step": 7, "title": "Add flocculant", "explication": "Add flocculant if water remains cloudy."},
+          {"step": 8, "title": "Rest and vacuum", "explication": "Let it rest, then vacuum to drain."}
+        ]
+      }
+    },
+    "severe": {
+      "es": {
+        "procedure": [
+          {"step": 1, "title": "Medir valores iniciales", "explication": "Medir pH y cloro."},
+          {"step": 2, "title": "Ajustar pH", "explication": "Ajustar pH."},
+          {"step": 3, "title": "Cepillado intensivo", "explication": "Cepillado intensivo en toda la piscina."},
+          {"step": 4, "title": "Añadir cloro shock", "explication": "Añadir cloro fuerte (15-20 ppm)."},
+          {"step": 5, "title": "Filtrar", "explication": "Filtrar durante 48 horas seguidas."},
+          {"step": 6, "title": "Limpieza continua del filtro", "explication": "Arena/vidrio: BACKWASH 2-3 min + RINSE 30s–2min. Cartucho: limpiar con manguera varias veces durante la filtración."},
+          {"step": 7, "title": "Añadir floculante", "explication": "Añadir floculante."},
+          {"step": 8, "title": "Reposar", "explication": "Dejar reposar 24h sin filtrar."},
+          {"step": 9, "title": "Aspirado a desagüe", "explication": "Aspirar suciedad a desagüe (no al filtro)."},
+          {"step": 10, "title": "Medición final", "explication": "Volver a medir parámetros."}
+        ]
+      },
+      "en": {
+        "procedure": [
+          {"step": 1, "title": "Measure initial values", "explication": "Measure pH and chlorine."},
+          {"step": 2, "title": "Adjust pH", "explication": "Adjust pH."},
+          {"step": 3, "title": "Intensive brushing", "explication": "Brush the entire pool intensively."},
+          {"step": 4, "title": "Add shock chlorine", "explication": "Add strong chlorine (15–20 ppm)."},
+          {"step": 5, "title": "Filter", "explication": "Filter continuously for 48 hours."},
+          {"step": 6, "title": "Continuous filter cleaning", "explication": "Sand/Glass: BACKWASH 2–3 min + RINSE 30s–2min. Cartridge: hose clean several times during filtration."},
+          {"step": 7, "title": "Add flocculant", "explication": "Add flocculant."},
+          {"step": 8, "title": "Rest", "explication": "Let rest 24h without filtering."},
+          {"step": 9, "title": "Vacuum to drain", "explication": "Vacuum debris to drain (not filter)."},
+          {"step": 10, "title": "Final measurement", "explication": "Measure parameters again."}
+        ]
+      }
+    }
+  },
+
+  "whitish_water": {
+    "es": {
+      "procedure": [
+        {"step": 1, "title": "Medir valores iniciales", "explication": "Medir pH y cloro."},
+        {"step": 2, "title": "Ajustar pH", "explication": "Ajustar pH entre 7.2 y 7.6."},
+        {"step": 3, "title": "Limpieza inicial del filtro", "explication": "Limpiar filtro antes de empezar. Arena/vidrio: BACKWASH 2-3 min + RINSE 30s–2min. Cartucho: limpiar con manguera."},
+        {"step": 4, "title": "Filtrar", "explication": "Filtrar 24-48 horas seguidas."},
+        {"step": 5, "title": "Cepillado", "explication": "Cepillar si hay partículas en paredes."},
+        {"step": 6, "title": "Limpieza del filtro", "explication": "Volver a limpiar filtro tras filtración. Arena/vidrio: BACKWASH 2-3 min + RINSE 30s–2min. Cartucho: limpiar con manguera."},
+        {"step": 7, "title": "Añadir floculante", "explication": "Añadir floculante si no mejora."},
+        {"step": 8, "title": "Reposar", "explication": "Dejar reposar 24h."},
+        {"step": 9, "title": "Aspirado a desagüe", "explication": "Aspirar a desagüe."}
+      ]
+    },
+    "en": {
+      "procedure": [
+        {"step": 1, "title": "Measure initial values", "explication": "Measure pH and chlorine."},
+        {"step": 2, "title": "Adjust pH", "explication": "Adjust pH between 7.2 and 7.6."},
+        {"step": 3, "title": "Initial filter cleaning", "explication": "Clean filter before starting. Sand/Glass: BACKWASH 2–3 min + RINSE 30s–2min. Cartridge: hose clean."},
+        {"step": 4, "title": "Filter", "explication": "Filter continuously for 24–48 hours."},
+        {"step": 5, "title": "Brushing", "explication": "Brush if particles remain on walls."},
+        {"step": 6, "title": "Filter cleaning", "explication": "Clean filter again after filtering. Sand/Glass: BACKWASH 2–3 min + RINSE 30s–2min. Cartridge: hose clean."},
+        {"step": 7, "title": "Add flocculant", "explication": "Add flocculant if water does not improve."},
+        {"step": 8, "title": "Rest", "explication": "Let rest 24h."},
+        {"step": 9, "title": "Vacuum to drain", "explication": "Vacuum to drain."}
+      ]
+    }
+  },
+
+  "scale": {
+    "es": {
+      "procedure": [
+        {"step": 1, "title": "Medir valores iniciales", "explication": "Medir pH."},
+        {"step": 2, "title": "Ajustar pH", "explication": "Bajar pH si está alto."},
+        {"step": 3, "title": "Cepillado", "explication": "Cepillar zonas con sarro."},
+        {"step": 4, "title": "Filtrar", "explication": "Filtrar tras el cepillado."},
+        {"step": 5, "title": "Limpiar filtro", "explication": "Limpiar filtro para eliminar residuos. Arena/vidrio: BACKWASH 2–3 min + RINSE 30s–2min. Cartucho: limpiar con manguera."}
+      ]
+    },
+    "en": {
+      "procedure": [
+        {"step": 1, "title": "Measure initial values", "explication": "Measure pH."},
+        {"step": 2, "title": "Adjust pH", "explication": "Lower pH if too high."},
+        {"step": 3, "title": "Brushing", "explication": "Brush areas with scale."},
+        {"step": 4, "title": "Filter", "explication": "Filter after brushing."},
+        {"step": 5, "title": "Clean filter", "explication": "Clean filter to remove residues. Sand/Glass: BACKWASH 2–3 min + RINSE 30s–2min. Cartridge: hose clean."}
+      ]
+    }
+  },
+
+  "ph_high": {
+    "es": {
+      "procedure": [
+        {"step": 1, "title": "Medir valores iniciales", "explication": "Medir pH."},
+        {"step": 2, "title": "Añadir corrector de pH", "explication": "Añadir ácido para bajarlo."},
+        {"step": 3, "title": "Filtrar", "explication": "Filtrar durante varias horas."},
+        {"step": 4, "title": "Medición de control", "explication": "Volver a medir."},
+        {"step": 5, "title": "Revisión del filtro", "explication": "Limpiar filtro si ha habido mucha suciedad. Arena/vidrio: BACKWASH 2–3 min + RINSE 30s–2min. Cartucho: limpiar con manguera."}
+      ]
+    },
+    "en": {
+      "procedure": [
+        {"step": 1, "title": "Measure initial values", "explication": "Measure pH."},
+        {"step": 2, "title": "Add pH corrector", "explication": "Add acid to lower pH."},
+        {"step": 3, "title": "Filter", "explication": "Filter for several hours."},
+        {"step": 4, "title": "Control measurement", "explication": "Measure again."},
+        {"step": 5, "title": "Filter review", "explication": "Clean filter if very dirty. Sand/Glass: BACKWASH 2–3 min + RINSE 30s–2min. Cartridge: hose clean."}
+      ]
+    }
+  },
+
+  "general_rules": {
+    "es": {
+      "description": "Orden correcto SIEMPRE",
+      "steps": ["1. Medir","2. Ajustar pH","3. Cepillar","4. Añadir químicos","5. Filtrar","6. Limpiar filtro","7. Medir otra vez","8. Aspirar","9. Ajuste final"]
+    },
+    "en": {
+      "description": "Always follow this correct order",
+      "steps": ["1. Measure","2. Adjust pH","3. Brush","4. Add chemicals","5. Filter","6. Clean filter","7. Measure again","8. Vacuum","9. Final adjustment"]
+    }
+  }
+}

@@ -10,10 +10,7 @@ import 'package:pool_solution/domain/entities/enums.dart';
 import 'package:pool_solution/domain/entities/inventory_entity.dart';
 import 'package:pool_solution/domain/entities/measurement_entity.dart';
 import 'package:pool_solution/domain/entities/pool_entity.dart';
-import 'package:pool_solution/domain/entities/problem_entity.dart';
-import 'package:pool_solution/domain/entities/problem_step_entity.dart';
 import 'package:pool_solution/domain/entities/treatment_entity.dart';
-
 
 part 'app_database.g.dart';
 
@@ -42,7 +39,8 @@ class Chemicals extends Table {
   IntColumn get chemicalTypeId =>
       integer().nullable().references(ChemicalTypes, #id)();
   TextColumn get format => textEnum<ChemicalFormat>().nullable()();
-  IntColumn get concentration => integer().nullable()();
+  // Almacenamos como REAL para soportar concentraciones decimales (ej: 35.5%)
+  RealColumn get concentration => real().nullable()();
   TextColumn get unit => textEnum<Unit>().nullable()();
 }
 
@@ -69,34 +67,23 @@ class Measurements extends Table {
   TextColumn get notes => text().nullable()();
 }
 
-@UseRowClass(ProblemEntity)
-class Problems extends Table {
-  IntColumn get id => integer().autoIncrement()();
-  TextColumn get name => text().nullable()();
-  TextColumn get description => text().nullable()();
-  TextColumn get category => text().nullable()();
-  TextColumn get languageCode => text().withDefault(const Constant('es'))(); // Idioma base (default: español)
-}
-
-@UseRowClass(ProblemStepEntity)
-class ProblemSteps extends Table {
-  IntColumn get id => integer().autoIncrement()();
-  IntColumn get problemId => integer().nullable().references(Problems, #id)();
-  IntColumn get stepOrder => integer().nullable()();
-  TextColumn get title => text().nullable()();
-  TextColumn get description => text().nullable()();
-  BoolColumn get requiresCalculation => boolean().nullable()();
-  TextColumn get languageCode => text().withDefault(const Constant('es'))(); // Idioma base (default: español)
-}
-
+/// Tabla de tratamientos — registra cada acción química aplicada.
+/// poolId     → piscina tratada
+/// chemicalId → producto utilizado (puede ser null si el trat. es manual)
+/// measurementId → medición que motivó el tratamiento (opcional)
+/// problemId  → id del problema del JSON (ej: 'green_water')
+/// amountUsed → cantidad aplicada
+/// unit       → unidad de la cantidad (g, ml, kg, l)
+/// notes      → texto libre / descripción del tratamiento
 @UseRowClass(TreatmentEntity)
 class Treatments extends Table {
   IntColumn get id => integer().autoIncrement()();
   IntColumn get poolId => integer().nullable().references(Pools, #id)();
-  IntColumn get chemicalId => integer().nullable().references(Chemicals, #id)();
+  IntColumn get chemicalId =>
+      integer().nullable().references(Chemicals, #id)();
   IntColumn get measurementId =>
       integer().nullable().references(Measurements, #id)();
-  IntColumn get problemId => integer().nullable().references(Problems, #id)();
+  TextColumn get problemId => text().nullable()();
   DateTimeColumn get date => dateTime().nullable()();
   RealColumn get amountUsed => real().nullable()();
   TextColumn get unit => textEnum<Unit>().nullable()();
@@ -109,15 +96,34 @@ class Treatments extends Table {
   Chemicals,
   Inventories,
   Measurements,
-  Problems,
-  ProblemSteps,
   Treatments,
 ])
 class AppDatabase extends _$AppDatabase {
   AppDatabase() : super(_openConnection());
 
   @override
-  int get schemaVersion => 2;
+  int get schemaVersion => 5;
+
+  @override
+  MigrationStrategy get migration => MigrationStrategy(
+        onCreate: (m) => m.createAll(),
+        onUpgrade: (m, from, to) async {
+          // v4 → v5: Treatments gana poolId, chemicalId, problemId,
+          //           amountUsed, unit, notes y date.
+          //           concentration pasa de INTEGER a REAL en Chemicals.
+          if (from < 5) {
+            await m.addColumn(db.treatments, db.treatments.poolId);
+            await m.addColumn(db.treatments, db.treatments.chemicalId);
+            await m.addColumn(db.treatments, db.treatments.problemId);
+            await m.addColumn(db.treatments, db.treatments.amountUsed);
+            await m.addColumn(db.treatments, db.treatments.unit);
+            await m.addColumn(db.treatments, db.treatments.notes);
+          }
+        },
+      );
+
+  // Alias útil para evitar conflicto de nombre con el getter `db`
+  AppDatabase get db => this;
 }
 
 LazyDatabase _openConnection() {

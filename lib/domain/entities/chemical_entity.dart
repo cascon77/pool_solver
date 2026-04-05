@@ -8,7 +8,7 @@ class ChemicalEntity {
   int? chemicalTypeId;
   ChemicalType? chemicalType;
   ChemicalFormat? format;
-  int? concentration;
+  double? concentration;
   Unit? unit;
 
   ChemicalEntity({
@@ -27,7 +27,7 @@ class ChemicalEntity {
     int? chemicalTypeId,
     ChemicalType? chemicalType,
     ChemicalFormat? format,
-    int? concentration,
+    double? concentration,
     Unit? unit,
   }) {
     return ChemicalEntity(
@@ -52,7 +52,7 @@ class ChemicalEntity {
       format: json['format'] != null
           ? ChemicalFormat.values.firstWhere((e) => e.name == json['format'])
           : null,
-      concentration: json['concentration'] as int?,
+      concentration: json['concentration'] as double?,
       unit: json['unit'] != null
           ? Unit.values.firstWhere((e) => e.name == json['unit'])
           : null,

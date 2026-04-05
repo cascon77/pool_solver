@@ -1,5 +1,3 @@
-
-
 import 'package:pool_solution/domain/entities/entities.dart';
 
 class MeasurementEntity {
@@ -14,6 +12,7 @@ class MeasurementEntity {
   double? salt;
   double? calciumHardness;
   String? notes;
+  List<TreatmentEntity>? treatments;
 
   MeasurementEntity({
     this.id,
@@ -27,6 +26,7 @@ class MeasurementEntity {
     this.salt,
     this.calciumHardness,
     this.notes,
+    this.treatments,
   });
 
   MeasurementEntity copyWith({
@@ -41,6 +41,7 @@ class MeasurementEntity {
     double? salt,
     double? calciumHardness,
     String? notes,
+    List<TreatmentEntity>? treatments,
   }) {
     return MeasurementEntity(
       id: id ?? this.id,
@@ -54,6 +55,7 @@ class MeasurementEntity {
       salt: salt ?? this.salt,
       calciumHardness: calciumHardness ?? this.calciumHardness,
       notes: notes ?? this.notes,
+      treatments: treatments ?? this.treatments,
     );
   }
 
@@ -72,6 +74,11 @@ class MeasurementEntity {
       salt: (json['salt'] as num?)?.toDouble(),
       calciumHardness: (json['calciumHardness'] as num?)?.toDouble(),
       notes: json['notes'] as String?,
+      treatments: json['treatments'] != null
+          ? (json['treatments'] as List)
+              .map((i) => TreatmentEntity.fromJson(i as Map<String, dynamic>))
+              .toList()
+          : null,
     );
   }
 
@@ -88,6 +95,7 @@ class MeasurementEntity {
       'salt': salt,
       'calciumHardness': calciumHardness,
       'notes': notes,
+      'treatments': treatments?.map((e) => e.toJson()).toList(),
     };
   }
 }

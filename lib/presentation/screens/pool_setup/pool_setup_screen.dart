@@ -14,9 +14,8 @@ class PoolSetupScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context)!;
-
     return Scaffold(
-      drawer: LateralPoolMenu(),
+      drawer: LateralPoolMenu(pool: pool,isPoolSetupScreen: true),
       appBar: AppBar(
         title: Text(pool.name ?? l10n.noName),
         centerTitle: true

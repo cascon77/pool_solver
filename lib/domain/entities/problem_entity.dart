@@ -1,9 +1,9 @@
 class ProblemEntity {
-  int? id;
+  String? id;
   String? name;
   String? description;
   String? category;
-  String? languageCode;  // Idioma del contenido ('es', 'en', 'fr', etc.)
+  String? languageCode;
 
   ProblemEntity({
     this.id,
@@ -14,7 +14,7 @@ class ProblemEntity {
   });
 
   ProblemEntity copyWith({
-    int? id,
+    String? id,
     String? name,
     String? description,
     String? category,
@@ -31,7 +31,7 @@ class ProblemEntity {
 
   factory ProblemEntity.fromJson(Map<String, dynamic> json) {
     return ProblemEntity(
-      id: json['id'] as int?,
+      id: json['id'] as String?,
       name: json['name'] as String?,
       description: json['description'] as String?,
       category: json['category'] as String?,

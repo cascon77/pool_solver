@@ -1,15 +1,14 @@
-
 import 'package:pool_solution/domain/entities/entities.dart';
 
 class ProblemStepEntity {
-  int? id;
-  int? problemId;
+  String? id;
+  String? problemId;
   ProblemEntity? problem;
   int? stepOrder;
   String? title;
   String? description;
   bool? requiresCalculation;
-  String? languageCode;  // Idioma del contenido ('es', 'en', 'fr', etc.)
+  String? languageCode;
 
   ProblemStepEntity({
     this.id,
@@ -23,8 +22,8 @@ class ProblemStepEntity {
   });
 
   ProblemStepEntity copyWith({
-    int? id,
-    int? problemId,
+    String? id,
+    String? problemId,
     ProblemEntity? problem,
     int? stepOrder,
     String? title,
@@ -46,8 +45,8 @@ class ProblemStepEntity {
 
   factory ProblemStepEntity.fromJson(Map<String, dynamic> json) {
     return ProblemStepEntity(
-      id: json['id'] as int?,
-      problemId: json['problemId'] as int?,
+      id: json['id'] as String?,
+      problemId: json['problemId'] as String?,
       problem: json['problem'] != null
           ? ProblemEntity.fromJson(json['problem'] as Map<String, dynamic>)
           : null,
