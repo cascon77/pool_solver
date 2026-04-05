@@ -11,6 +11,7 @@ class MeasurementEntity {
   double? stabilizer;
   double? salt;
   double? calciumHardness;
+  double? temperature;
   String? notes;
   List<TreatmentEntity>? treatments;
 
@@ -25,6 +26,7 @@ class MeasurementEntity {
     this.stabilizer,
     this.salt,
     this.calciumHardness,
+    this.temperature,
     this.notes,
     this.treatments,
   });
@@ -40,6 +42,7 @@ class MeasurementEntity {
     double? stabilizer,
     double? salt,
     double? calciumHardness,
+    double? temperature,
     String? notes,
     List<TreatmentEntity>? treatments,
   }) {
@@ -54,6 +57,7 @@ class MeasurementEntity {
       stabilizer: stabilizer ?? this.stabilizer,
       salt: salt ?? this.salt,
       calciumHardness: calciumHardness ?? this.calciumHardness,
+      temperature: temperature ?? this.temperature,
       notes: notes ?? this.notes,
       treatments: treatments ?? this.treatments,
     );
@@ -73,6 +77,7 @@ class MeasurementEntity {
       stabilizer: (json['stabilizer'] as num?)?.toDouble(),
       salt: (json['salt'] as num?)?.toDouble(),
       calciumHardness: (json['calciumHardness'] as num?)?.toDouble(),
+      temperature: (json['temperature'] as num?)?.toDouble(),
       notes: json['notes'] as String?,
       treatments: json['treatments'] != null
           ? (json['treatments'] as List)
@@ -94,6 +99,7 @@ class MeasurementEntity {
       'stabilizer': stabilizer,
       'salt': salt,
       'calciumHardness': calciumHardness,
+      'temperature': temperature,
       'notes': notes,
       'treatments': treatments?.map((e) => e.toJson()).toList(),
     };

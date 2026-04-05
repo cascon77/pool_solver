@@ -19,6 +19,16 @@ final measurementsByPoolProvider =
   return ref.watch(measurementRepositoryProvider).getByPoolId(poolId);
 });
 
+final latestMeasurementByPoolProvider =
+    FutureProvider.family<MeasurementEntity?, int>((ref, poolId) async {
+  final measurements = await ref.watch(measurementsByPoolProvider(poolId).future);
+  if (measurements.isEmpty) return null;
+  // Assuming they are ordered by date or ID in the repository, 
+  // otherwise we should sort them here.
+  measurements.sort((a, b) => (b.date ?? DateTime(0)).compareTo(a.date ?? DateTime(0)));
+  return measurements.first;
+});
+
 final saveMeasurementProvider =
     FutureProvider.family<int, MeasurementEntity>((ref, measurement) async {
   final repo = ref.watch(measurementRepositoryProvider);
