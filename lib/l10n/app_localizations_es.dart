@@ -411,6 +411,12 @@ class AppLocalizationsEs extends AppLocalizations {
   String get createPool => 'Crear Piscina';
 
   @override
+  String get rectangular => 'Rectangular';
+
+  @override
+  String get other => 'Otro';
+
+  @override
   String get spanish => 'Español';
 
   @override
@@ -454,6 +460,39 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get hardness => 'Dureza';
+
+  @override
+  String get phCalcDescription => 'El pH define el nivel de acidez o alcalinidad del agua; su control es vital para la salud de la piscina. Un nivel excesivo neutraliza el poder del cloro, facilitando que el agua se enturbie o se torne verdosa. En cambio, un pH insuficiente genera irritación en ojos y vías respiratorias, además de corroer los elementos metálicos por la excesiva acidez.';
+
+  @override
+  String get poolVolume => 'Volumen de la piscina';
+
+  @override
+  String get initialPh => 'pH actual';
+
+  @override
+  String get targetPh => 'pH objetivo';
+
+  @override
+  String get currentAlkalinity => 'Alcalinidad actual (ppm)';
+
+  @override
+  String get selectProduct => 'Seleccionar producto';
+
+  @override
+  String get sodiumBicarbonate => 'Bicarbonato de sodio';
+
+  @override
+  String get sodiumCarbonate => 'Carbonato de sodio (Soda Ash)';
+
+  @override
+  String get causticSoda => 'Soda cáustica';
+
+  @override
+  String get calculate => 'Calcular';
+
+  @override
+  String get resultAmount => 'Cantidad a añadir';
 
   @override
   String get addMeasurementOrTreatment => 'Añadir medición o tratamiento';

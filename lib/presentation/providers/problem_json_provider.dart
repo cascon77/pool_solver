@@ -19,9 +19,6 @@ final problemsListProvider = FutureProvider.family<List<ProblemEntity>, String>(
     
     // Si tiene niveles (como green_water)
     if (value.containsKey('low') || value.containsKey('medium') || value.containsKey('severe')) {
-      // Para la lista general, mostramos el problema base o podrías desglosarlos
-      // Por simplicidad, añadimos el problema base con una descripción general
-      final langData = value['medium']?[languageCode] ?? value['low']?[languageCode];
       problems.add(ProblemEntity(
         id: key,
         name: key == 'green_water' ? (languageCode == 'es' ? 'Agua Verde' : 'Green Water') : key,

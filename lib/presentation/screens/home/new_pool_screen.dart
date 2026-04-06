@@ -19,8 +19,8 @@ class NewPoolScreen extends ConsumerStatefulWidget {
 class _NewPoolScreenState extends ConsumerState<NewPoolScreen> {
   late final TextEditingController _nameController;
   late final TextEditingController _volumeController;
-  late final TextEditingController _shapeController;
   
+  PoolShape? _selectedPoolShape;
   WaterType? _selectedWaterType;
   FilterType? _selectedFilterType;
   bool _isLoading = false;
@@ -32,7 +32,12 @@ class _NewPoolScreenState extends ConsumerState<NewPoolScreen> {
     _volumeController = TextEditingController(
       text: widget.pool?.volumeLiters?.toString() ?? '',
     );
-    _shapeController = TextEditingController(text: widget.pool?.shape ?? '');
+    _selectedPoolShape = widget.pool?.shape != null
+        ? PoolShape.values.firstWhere(
+            (e) => e.name == widget.pool?.shape,
+            orElse: () => PoolShape.rectangular,
+          )
+        : PoolShape.rectangular;
     _selectedWaterType = widget.pool?.waterType;
     _selectedFilterType = widget.pool?.filterType;
   }
@@ -41,7 +46,6 @@ class _NewPoolScreenState extends ConsumerState<NewPoolScreen> {
   void dispose() {
     _nameController.dispose();
     _volumeController.dispose();
-    _shapeController.dispose();
     super.dispose();
   }
 
@@ -58,7 +62,7 @@ class _NewPoolScreenState extends ConsumerState<NewPoolScreen> {
         volumeLiters: double.tryParse(_volumeController.text),
         waterType: _selectedWaterType,
         filterType: _selectedFilterType,
-        shape: _shapeController.text.trim(),
+        shape: _selectedPoolShape?.name,
         createdAt: widget.pool?.createdAt ?? DateTime.now(),
       );
 
@@ -114,7 +118,7 @@ class _NewPoolScreenState extends ConsumerState<NewPoolScreen> {
       _showErrorDialog(l10n.filterTypeRequired);
       return false;
     }
-    if (_shapeController.text.isEmpty) {
+    if (_selectedPoolShape == null) {
       _showErrorDialog(l10n.shapeRequired);
       return false;
     }
@@ -229,13 +233,23 @@ class _NewPoolScreenState extends ConsumerState<NewPoolScreen> {
             const SizedBox(height: 16),
 
             // Forma de la piscina
-            TextField(
-              controller: _shapeController,
+            DropdownButtonFormField<PoolShape>(
+              initialValue: _selectedPoolShape,
               decoration: InputDecoration(
                 labelText: l10n.poolShape,
-                hintText: l10n.shapeHint,
                 prefixIcon: const Icon(Icons.shape_line),
               ),
+              items: PoolShape.values.map((shape) {
+                return DropdownMenuItem(
+                  value: shape,
+                  child: Text(
+                    shape == PoolShape.rectangular ? l10n.rectangular : l10n.other,
+                  ),
+                );
+              }).toList(),
+              onChanged: (value) {
+                setState(() => _selectedPoolShape = value);
+              },
             ),
             const SizedBox(height: 32),
 

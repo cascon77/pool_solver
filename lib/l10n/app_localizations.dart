@@ -899,6 +899,18 @@ abstract class AppLocalizations {
   /// **'Create Pool'**
   String get createPool;
 
+  /// No description provided for @rectangular.
+  ///
+  /// In en, this message translates to:
+  /// **'Rectangular'**
+  String get rectangular;
+
+  /// No description provided for @other.
+  ///
+  /// In en, this message translates to:
+  /// **'Other'**
+  String get other;
+
   /// No description provided for @spanish.
   ///
   /// In en, this message translates to:
@@ -988,6 +1000,72 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Hardness'**
   String get hardness;
+
+  /// No description provided for @phCalcDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'The pH level measures the acidity or alkalinity of your pool water; managing it is crucial for a healthy swimming environment. High pH levels render chlorine ineffective, causing the water to become cloudy or green easily. Conversely, low pH leads to eye and respiratory irritation, as well as corrosive acidic water that can damage metal components.'**
+  String get phCalcDescription;
+
+  /// No description provided for @poolVolume.
+  ///
+  /// In en, this message translates to:
+  /// **'Pool volume'**
+  String get poolVolume;
+
+  /// No description provided for @initialPh.
+  ///
+  /// In en, this message translates to:
+  /// **'Current pH'**
+  String get initialPh;
+
+  /// No description provided for @targetPh.
+  ///
+  /// In en, this message translates to:
+  /// **'Target pH'**
+  String get targetPh;
+
+  /// No description provided for @currentAlkalinity.
+  ///
+  /// In en, this message translates to:
+  /// **'Current alkalinity (ppm)'**
+  String get currentAlkalinity;
+
+  /// No description provided for @selectProduct.
+  ///
+  /// In en, this message translates to:
+  /// **'Select product'**
+  String get selectProduct;
+
+  /// No description provided for @sodiumBicarbonate.
+  ///
+  /// In en, this message translates to:
+  /// **'Sodium Bicarbonate'**
+  String get sodiumBicarbonate;
+
+  /// No description provided for @sodiumCarbonate.
+  ///
+  /// In en, this message translates to:
+  /// **'Sodium Carbonate (Soda Ash)'**
+  String get sodiumCarbonate;
+
+  /// No description provided for @causticSoda.
+  ///
+  /// In en, this message translates to:
+  /// **'Caustic Soda'**
+  String get causticSoda;
+
+  /// No description provided for @calculate.
+  ///
+  /// In en, this message translates to:
+  /// **'Calculate'**
+  String get calculate;
+
+  /// No description provided for @resultAmount.
+  ///
+  /// In en, this message translates to:
+  /// **'Amount to add'**
+  String get resultAmount;
 
   /// No description provided for @addMeasurementOrTreatment.
   ///

@@ -15,6 +15,12 @@ class Routes {
   static const String calculators = "calculators";
   static const String problems = "problems";
   static const String problemDetail = "problem-detail";
+  static const String calcPh = "calc-ph";
+  static const String calcCl = "calc-cl";
+  static const String calcFlocculant = "calc-flocculant";
+  static const String calcChloramines = "calc-chloramines";
+  static const String calcAlkalinity = "calc-alkalinity";
+
 
 
   static List<GoRoute> getRoutes() {
@@ -85,6 +91,46 @@ class Routes {
         builder: (context, state) {
           final problem = state.extra as ProblemEntity;
           return ProblemDetailScreen(problem: problem);
+        },
+      ),
+      GoRoute(
+        path: '/calculators/ph',
+        name: calcPh,
+        builder: (context, state) {
+          final pool = state.extra as PoolEntity;
+          return CalcPhScreen(pool: pool);
+        },
+      ),
+      GoRoute(
+        path: '/calculators/cl',
+        name: calcCl,
+        builder: (context, state) {
+          final pool = state.extra as PoolEntity;
+          return CalcClScreen(pool: pool);
+        },
+      ),
+      GoRoute(
+        path: '/calculators/flocculant',
+        name: calcFlocculant,
+        builder: (context, state) {
+          final pool = state.extra as PoolEntity;
+          return CalcFlocculantScreen(pool: pool);
+        },
+      ),
+      GoRoute(
+        path: '/calculators/chloramines',
+        name: calcChloramines,
+        builder: (context, state) {
+          final pool = state.extra as PoolEntity;
+          return CalcChloraminesScreen(pool: pool);
+        },
+      ),
+      GoRoute(
+        path: '/calculators/alkalinity',
+        name: calcAlkalinity,
+        builder: (context, state) {
+          final pool = state.extra as PoolEntity;
+          return CalcAlkalinityScreen(pool: pool);
         },
       ),
     ];

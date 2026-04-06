@@ -411,6 +411,12 @@ class AppLocalizationsEn extends AppLocalizations {
   String get createPool => 'Create Pool';
 
   @override
+  String get rectangular => 'Rectangular';
+
+  @override
+  String get other => 'Other';
+
+  @override
   String get spanish => 'Spanish';
 
   @override
@@ -454,6 +460,39 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get hardness => 'Hardness';
+
+  @override
+  String get phCalcDescription => 'The pH level measures the acidity or alkalinity of your pool water; managing it is crucial for a healthy swimming environment. High pH levels render chlorine ineffective, causing the water to become cloudy or green easily. Conversely, low pH leads to eye and respiratory irritation, as well as corrosive acidic water that can damage metal components.';
+
+  @override
+  String get poolVolume => 'Pool volume';
+
+  @override
+  String get initialPh => 'Current pH';
+
+  @override
+  String get targetPh => 'Target pH';
+
+  @override
+  String get currentAlkalinity => 'Current alkalinity (ppm)';
+
+  @override
+  String get selectProduct => 'Select product';
+
+  @override
+  String get sodiumBicarbonate => 'Sodium Bicarbonate';
+
+  @override
+  String get sodiumCarbonate => 'Sodium Carbonate (Soda Ash)';
+
+  @override
+  String get causticSoda => 'Caustic Soda';
+
+  @override
+  String get calculate => 'Calculate';
+
+  @override
+  String get resultAmount => 'Amount to add';
 
   @override
   String get addMeasurementOrTreatment => 'Add measurement or treatment';

@@ -33,7 +33,9 @@ class PoolCard extends StatelessWidget {
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(12),
                   child: Image.asset(
-                    "assets/images/pool.png",
+                      pool.shape == 'rectangular'
+                        ? "assets/images/poolrec.png"
+                        : "assets/images/pool.png",
                     fit: BoxFit.cover,
                     errorBuilder: (context, error, stackTrace) => const Icon(
                       Icons.pool_rounded,

@@ -7,3 +7,8 @@ export 'package:pool_solution/presentation/screens/inventory/inventory_screen.da
 export 'package:pool_solution/presentation/screens/history/history_screen.dart';
 export 'package:pool_solution/presentation/screens/calculators/calc_list_screen.dart';
 export 'package:pool_solution/presentation/screens/problems/problem_category_list_screen.dart';
+export 'package:pool_solution/presentation/screens/calculators/calc_ph_screen.dart';
+export 'package:pool_solution/presentation/screens/calculators/calc_cl_screen.dart';
+export 'package:pool_solution/presentation/screens/calculators/calc_flocculant_screen.dart';
+export 'package:pool_solution/presentation/screens/calculators/calc_chloramines_screen.dart';
+export 'package:pool_solution/presentation/screens/calculators/calc_alkalinity_screen.dart';
