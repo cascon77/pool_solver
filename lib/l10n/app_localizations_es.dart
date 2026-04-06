@@ -442,4 +442,19 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get history => 'Historial';
+
+  @override
+  String get alkalinity => 'Alcalinidad';
+
+  @override
+  String get temperature => 'Temperatura';
+
+  @override
+  String get stabilizer => 'Estabilizador';
+
+  @override
+  String get hardness => 'Dureza';
+
+  @override
+  String get addMeasurementOrTreatment => 'Añadir medición o tratamiento';
 }

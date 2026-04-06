@@ -144,5 +144,10 @@
   "maintenance": "Maintenance",
   "parameters": "Parameters",
   "inventory": "Inventory",
-  "history": "History"
+  "history": "History",
+  "alkalinity": "Alkalinity",
+  "temperature": "Temperature",
+  "stabilizer": "Stabilizer",
+  "hardness": "Hardness",
+  "addMeasurementOrTreatment": "Add measurement or treatment"
 }

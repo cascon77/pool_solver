@@ -42,7 +42,7 @@ class PoolSetupScreen extends ConsumerWidget {
                         onTap: () {},
                       ),
                       ParameterCard(
-                        title: "Cloro",
+                        title: l10n.chlorine,
                         target: "1.0 - 3.0",
                         value:
                             measurement?.chlorine?.toStringAsFixed(1) ??
@@ -58,7 +58,7 @@ class PoolSetupScreen extends ConsumerWidget {
                     spacing: 6,
                     children: [
                       ParameterCard(
-                        title: "Alcalinidad",
+                        title: l10n.alkalinity,
                         target: "80 - 120",
                         value:
                             measurement?.alkalinity?.toStringAsFixed(0) ??
@@ -68,7 +68,7 @@ class PoolSetupScreen extends ConsumerWidget {
                         onTap: () {},
                       ),
                       ParameterCard(
-                        title: "Temperatura",
+                        title: l10n.temperature,
                         value:
                             measurement?.temperature?.toStringAsFixed(1) ??
                             l10n.notAvailable,
@@ -84,7 +84,7 @@ class PoolSetupScreen extends ConsumerWidget {
                     spacing: 6,
                     children: [
                       ParameterCard(
-                        title: "Estabilizador",
+                        title: l10n.stabilizer,
                         target: "30 - 50",
                         value:
                             measurement?.stabilizer?.toStringAsFixed(0) ??
@@ -94,7 +94,7 @@ class PoolSetupScreen extends ConsumerWidget {
                         onTap: () {},
                       ),
                       ParameterCard(
-                        title: "Hardness",
+                        title: l10n.hardness,
                         target: "200 - 400",
                         value:
                             measurement?.calciumHardness?.toStringAsFixed(0) ??
@@ -111,7 +111,7 @@ class PoolSetupScreen extends ConsumerWidget {
                       spacing: 6,
                       children: [
                         ParameterCard(
-                          title: "Sal",
+                          title: l10n.salt,
                           target: "3000 - 4000",
                           value:
                               measurement?.salt?.toStringAsFixed(0) ??
@@ -134,7 +134,7 @@ class PoolSetupScreen extends ConsumerWidget {
                         children: [
                           const Icon(Icons.add),
                           const SizedBox(width: 8),
-                          Text("añadir medición o tratamiento"),
+                          Text(l10n.addMeasurementOrTreatment),
                         ],
                       ),
                     ),

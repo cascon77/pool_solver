@@ -144,5 +144,10 @@
   "maintenance": "Mantenimiento",
   "parameters": "Parámetros",
   "inventory": "Inventario",
-  "history": "Historial"
+  "history": "Historial",
+  "alkalinity": "Alcalinidad",
+  "temperature": "Temperatura",
+  "stabilizer": "Estabilizador",
+  "hardness": "Dureza",
+  "addMeasurementOrTreatment": "Añadir medición o tratamiento"
 }

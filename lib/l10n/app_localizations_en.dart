@@ -442,4 +442,19 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get history => 'History';
+
+  @override
+  String get alkalinity => 'Alkalinity';
+
+  @override
+  String get temperature => 'Temperature';
+
+  @override
+  String get stabilizer => 'Stabilizer';
+
+  @override
+  String get hardness => 'Hardness';
+
+  @override
+  String get addMeasurementOrTreatment => 'Add measurement or treatment';
 }

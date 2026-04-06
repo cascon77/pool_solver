@@ -1,10 +1,8 @@
 import 'package:go_router/go_router.dart';
 import 'package:pool_solution/domain/entities/entities.dart';
-import 'package:pool_solution/presentation/screens/home/home_screen.dart';
-import 'package:pool_solution/presentation/screens/home/new_pool_screen.dart';
-import 'package:pool_solution/presentation/screens/configuration/configuration_screen.dart';
-import 'package:pool_solution/presentation/screens/tips/tips_screen.dart';
-import 'package:pool_solution/presentation/screens/pool_setup/pool_setup_screen.dart';
+import 'package:pool_solution/presentation/screens/problems/problem_detail_screen.dart';
+import 'package:pool_solution/presentation/screens/screens.dart';
+
 
 class Routes {
   static const String home = "home";
@@ -12,6 +10,12 @@ class Routes {
   static const String configuration = "configuration";
   static const String poolSetup = "pool-setup";
   static const String newPool = "new-pool";
+  static const String inventory = "inventory";
+  static const String history = "history";
+  static const String calculators = "calculators";
+  static const String problems = "problems";
+  static const String problemDetail = "problem-detail";
+
 
   static List<GoRoute> getRoutes() {
     return [
@@ -44,6 +48,43 @@ class Routes {
         builder: (context, state) {
           final pool = state.extra as PoolEntity?;
           return NewPoolScreen(pool: pool);
+        },
+      ),
+      GoRoute(
+        path: '/inventory',
+        name: inventory,
+        builder: (context, state) {
+          final pool = state.extra as PoolEntity;
+          return InventoryScreen(pool: pool);
+        },
+      ),
+      GoRoute(
+        path: '/history',
+        name: history,
+        builder: (context, state) {
+          final poolId = state.extra as int;
+          return HistoryScreen(poolId: poolId);
+        },
+      ),
+      GoRoute(
+        path: '/calculators',
+        name: calculators,
+        builder: (context, state) {
+          final pool = state.extra as PoolEntity;
+          return CalcListScreen(pool: pool);
+        },
+      ),
+      GoRoute(
+        path: '/problems',
+        name: problems,
+        builder: (context, state) => const ProblemCategoryListScreen(),
+      ),
+      GoRoute(
+        path: '/problems/problem-detail',
+        name: problemDetail,
+        builder: (context, state) {
+          final problem = state.extra as ProblemEntity;
+          return ProblemDetailScreen(problem: problem);
         },
       ),
     ];

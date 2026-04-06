@@ -49,7 +49,7 @@ class LateralPoolMenu extends StatelessWidget {
                 title: l10n.problems,
                 onTap: () {
                   Navigator.pop(context);
-                  context.pushNamed(Routes.configuration);
+                  context.pushNamed(Routes.problems);
                 },
               ),
             if (!isCalculatorScreen)
@@ -58,7 +58,7 @@ class LateralPoolMenu extends StatelessWidget {
                 title: l10n.calculator,
                 onTap: () {
                   Navigator.pop(context);
-                  context.pushNamed(Routes.configuration);
+                  context.pushNamed(Routes.calculators, extra: pool);
                 },
               ),
             if (!isInventoryScreen)
@@ -67,7 +67,7 @@ class LateralPoolMenu extends StatelessWidget {
                 title: l10n.inventory,
                 onTap: () {
                   Navigator.pop(context);
-                  context.pushNamed(Routes.configuration);
+                  context.pushNamed(Routes.inventory, extra: pool);
                 },
               ),
             if (!isHistoryScreen)
@@ -76,7 +76,7 @@ class LateralPoolMenu extends StatelessWidget {
                 title: l10n.history,
                 onTap: () {
                   Navigator.pop(context);
-                  context.pushNamed(Routes.configuration);
+                  context.pushNamed(Routes.history, extra: pool.id);
                 },
               ),
             const Divider(indent: 15, endIndent: 15),

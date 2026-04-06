@@ -69,7 +69,7 @@ class ConfigurationScreen extends ConsumerWidget {
             icon: Icons.brightness_auto_rounded,
             label: l10n.auto,
             isSelected: currentMode == ThemeMode.system,
-            onTap: () => ref.read(themeModeProvider.notifier).state = ThemeMode.system,
+            onTap: () => ref.read(themeModeProvider.notifier).setThemeMode(ThemeMode.system),
           ),
           _buildSegmentButton(
             context,
@@ -77,7 +77,7 @@ class ConfigurationScreen extends ConsumerWidget {
             icon: Icons.light_mode_rounded,
             label: l10n.light,
             isSelected: currentMode == ThemeMode.light,
-            onTap: () => ref.read(themeModeProvider.notifier).state = ThemeMode.light,
+            onTap: () => ref.read(themeModeProvider.notifier).setThemeMode(ThemeMode.light),
           ),
           _buildSegmentButton(
             context,
@@ -85,7 +85,7 @@ class ConfigurationScreen extends ConsumerWidget {
             icon: Icons.dark_mode_rounded,
             label: l10n.dark,
             isSelected: currentMode == ThemeMode.dark,
-            onTap: () => ref.read(themeModeProvider.notifier).state = ThemeMode.dark,
+            onTap: () => ref.read(themeModeProvider.notifier).setThemeMode(ThemeMode.dark),
           ),
         ],
       ),
@@ -137,7 +137,7 @@ class ConfigurationScreen extends ConsumerWidget {
           }).toList(),
           onChanged: (String? newCode) {
             if (newCode != null) {
-              ref.read(localeProvider.notifier).state = Locale(newCode);
+              ref.read(localeProvider.notifier).setLocale(Locale(newCode));
             }
           },
         ),

@@ -1,191 +1,452 @@
 {
   "chloramines": {
     "es": {
-      "description": "Las cloraminas aparecen cuando el cloro se combina con suciedad.",
+      "description": "Las cloraminas son compuestos que se forman cuando el cloro libre reacciona con materia orgánica aportada por los bañistas: sudor, orina, cremas solares y cosméticos. A diferencia del cloro libre, las cloraminas no desinfectan, pero sí provocan el característico 'olor a piscina', irritación ocular, picor de piel y problemas respiratorios. Se detectan midiendo la diferencia entre cloro total y cloro libre: si esa diferencia supera 0.2 ppm, hay cloraminas. La solución es un choque de cloro muy elevado (hipercloración) que destruye estos compuestos.",
       "procedure": [
-        {"step": 1, "title": "Medir valores iniciales", "explication": "Mide pH, cloro libre y total antes de añadir productos."},
-        {"step": 2, "title": "Calcular cloraminas", "explication": "Resta cloro libre al total."},
-        {"step": 3, "title": "Añadir cloro shock", "explication": "Añade 10 veces el valor de cloraminas (por la noche)."},
-        {"step": 4, "title": "Filtrar", "explication": "Filtra 24h continuas tras añadir el cloro."},
-        {"step": 5, "title": "Limpiar filtro", "explication": "Arena/vidrio: BACKWASH 2-3 min hasta agua transparente + RINSE 30s–2min. Cartucho: limpiar con manguera."},
-        {"step": 6, "title": "Medición de control", "explication": "Mide nuevamente tras 8–24h. Una vez cloro <3 ppm, ya se puede bañar."}
+        {
+          "step": 1,
+          "title": "Medir valores iniciales",
+          "explication": "Usa un kit de análisis fiable para medir pH, cloro libre y cloro total. La presencia de cloraminas se confirma cuando: Cloro Total - Cloro Libre > 0.2 ppm. Por ejemplo, si el cloro total es 2.0 ppm y el libre es 1.5 ppm, tienes 0.5 ppm de cloraminas. Anota este valor porque determinará la dosis de choque necesaria."
+        },
+        {
+          "step": 2,
+          "title": "Ajustar pH a 7.2",
+          "explication": "Antes de añadir cualquier producto, ajusta el pH al rango 7.2–7.4. Este paso es crítico: a pH 7.2, el cloro es hasta 3 veces más eficaz que a pH 7.8. Si el pH está alto, añade reductor de pH (ácido clorhídrico o bisulfato sódico) repartido por el perímetro de la piscina con la bomba en marcha. Espera 2 horas y vuelve a medir antes de continuar."
+        },
+        {
+          "step": 3,
+          "title": "Tratamiento de hipercloración (choque)",
+          "explication": "Calcula la dosis: multiplica el valor de cloraminas por 10 y añade esa cantidad de cloro granulado o líquido. Por ejemplo, con 0.5 ppm de cloraminas necesitas elevar el cloro libre hasta 5 ppm. Disuelve el cloro granulado previamente en un cubo con agua antes de añadirlo. Repártelo por toda la piscina con la bomba en marcha. Hazlo preferiblemente al atardecer o de noche para evitar que la radiación UV degrade el cloro antes de que actúe."
+        },
+        {
+          "step": 4,
+          "title": "Filtración continua 24 horas",
+          "explication": "Pon la depuradora a funcionar sin interrupciones durante al menos 24 horas. Es imprescindible que toda el agua pase por el filtro para que el tratamiento sea efectivo. No bañarse durante este periodo."
+        },
+        {
+          "step": 5,
+          "title": "Limpiar el filtro (Backwash + Rinse)",
+          "explication": "Tras las 24h de filtración, el filtro habrá acumulado todos los residuos. Si tienes filtro de arena o vidrio: realiza un BACKWASH (retrolavado) durante 2-3 minutos hasta que el agua que sale por el visor sea completamente transparente, luego haz 1 minuto de RINSE (enjuague) para asentar la arena antes de volver a filtrar. Si tienes filtro de cartucho: extráelo y límpialo a fondo con manguera a presión, asegurándote de abrir todos los pliegues."
+        },
+        {
+          "step": 6,
+          "title": "Medición final y validación",
+          "explication": "Pasadas las 24 horas, mide de nuevo pH, cloro libre y cloro total. Para poder bañarse con seguridad: el cloro libre debe estar por debajo de 3 ppm, y la diferencia entre cloro total y libre debe ser inferior a 0.2 ppm. Si los valores no son correctos, repite el tratamiento de choque."
+        }
       ]
     },
     "en": {
-      "description": "Chloramines appear when chlorine combines with dirt.",
+      "description": "Chloramines form when free chlorine reacts with organic matter introduced by swimmers: sweat, urine, sunscreen, and cosmetics. Unlike free chlorine, chloramines do not disinfect, but they do cause the characteristic 'pool smell', eye irritation, skin itching, and respiratory issues. They are detected by measuring the difference between total chlorine and free chlorine: if that difference exceeds 0.2 ppm, chloramines are present. The solution is a very high chlorine shock (superchlorination) that destroys these compounds.",
       "procedure": [
-        {"step": 1, "title": "Measure initial values", "explication": "Measure pH, free chlorine, and total chlorine before adding products."},
-        {"step": 2, "title": "Calculate chloramines", "explication": "Subtract free chlorine from total chlorine."},
-        {"step": 3, "title": "Add shock chlorine", "explication": "Add 10 times the chloramine value (at night)."},
-        {"step": 4, "title": "Filter", "explication": "Filter continuously for 24 hours after adding chlorine."},
-        {"step": 5, "title": "Clean filter", "explication": "Sand/Glass: BACKWASH 2-3 min until water is clear + RINSE 30s–2min. Cartridge: clean with hose."},
-        {"step": 6, "title": "Control measurement", "explication": "Measure again after 8–24 hours. Once chlorine <3 ppm, pool is safe to swim."}
+        {
+          "step": 1,
+          "title": "Measure initial values",
+          "explication": "Use a reliable test kit to measure pH, free chlorine, and total chlorine. Chloramines are confirmed when: Total Chlorine - Free Chlorine > 0.2 ppm. For example, if total chlorine is 2.0 ppm and free chlorine is 1.5 ppm, you have 0.5 ppm of chloramines. Note this value as it determines the required shock dose."
+        },
+        {
+          "step": 2,
+          "title": "Adjust pH to 7.2",
+          "explication": "Before adding any product, adjust pH to the 7.2–7.4 range. This step is critical: at pH 7.2, chlorine is up to 3 times more effective than at pH 7.8. If pH is high, add pH reducer (muriatic acid or sodium bisulfate) around the pool perimeter with the pump running. Wait 2 hours and re-test before continuing."
+        },
+        {
+          "step": 3,
+          "title": "Superchlorination shock treatment",
+          "explication": "Calculate the dose: multiply the chloramine value by 10 and add that amount of granular or liquid chlorine. For example, with 0.5 ppm of chloramines you need to raise free chlorine to 5 ppm. Pre-dissolve granular chlorine in a bucket of water before adding. Distribute around the entire pool with pump running. Do this at sunset or at night to prevent UV radiation from degrading the chlorine before it can act."
+        },
+        {
+          "step": 4,
+          "title": "Continuous filtration for 24 hours",
+          "explication": "Run the pump continuously for at least 24 hours. It is essential that all the water passes through the filter for the treatment to be effective. No swimming during this period."
+        },
+        {
+          "step": 5,
+          "title": "Clean the filter (Backwash + Rinse)",
+          "explication": "After 24h of filtration, the filter will have accumulated all residues. For sand/glass filters: perform a BACKWASH for 2-3 minutes until the sight glass shows clear water, then do a 1-minute RINSE to re-settle the sand before filtering again. For cartridge filters: remove and clean thoroughly with a high-pressure hose, making sure to open all the folds."
+        },
+        {
+          "step": 6,
+          "title": "Final measurement and validation",
+          "explication": "After 24 hours, re-test pH, free chlorine, and total chlorine. To swim safely: free chlorine must be below 3 ppm, and the difference between total and free chlorine must be less than 0.2 ppm. If values are not correct, repeat the shock treatment."
+        }
       ]
     }
   },
-
   "green_water": {
     "low": {
       "es": {
+        "description": "El agua empieza a verse turbia o con un ligero tono verdoso. Este es el estadio inicial del crecimiento de algas, generalmente causado por un nivel de cloro libre por debajo de 1 ppm, un pH elevado o poca filtración. Las paredes pueden sentirse resbaladizas al tacto, que es la primera señal de algas vivas. Actuar en este momento es mucho más fácil y económico que esperar a que el problema empeore.",
         "procedure": [
-          {"step": 1, "title": "Medir valores iniciales", "explication": "Medir pH y cloro antes de actuar."},
-          {"step": 2, "title": "Ajustar pH", "explication": "Ajustar pH a 7.2-7.4."},
-          {"step": 3, "title": "Cepillado", "explication": "Cepillar paredes y suelo para soltar las algas."},
-          {"step": 4, "title": "Añadir cloro shock", "explication": "Añadir cloro hasta 10 ppm."},
-          {"step": 5, "title": "Filtrar", "explication": "Filtrar durante 24 horas seguidas."},
-          {"step": 6, "title": "Limpiar filtro", "explication": "Arena/vidrio: BACKWASH 2-3 min + RINSE 30s–2min. Cartucho: limpiar con manguera."},
-          {"step": 7, "title": "Medición de control", "explication": "Volver a medir valores de pH y cloro."}
+          {
+            "step": 1,
+            "title": "Analizar y ajustar pH a 7.2",
+            "explication": "Mide el pH con un kit fiable. Para que el cloro de choque sea efectivo, el pH debe estar en 7.2 (nunca superior a 7.4). Si el pH está alto, añade reductor de pH repartido por el perímetro con la bomba en marcha y espera al menos 2 horas antes de continuar. Un pH de 7.8, por ejemplo, reduce la eficacia del cloro en más del 60%."
+          },
+          {
+            "step": 2,
+            "title": "Cepillado de fondo y paredes",
+            "explication": "Con la bomba en marcha, cepilla con fuerza todas las superficies: fondo, paredes y esquinas. Las algas se adhieren a las superficies y el cepillado las desprende y las pone en suspensión en el agua, donde el cloro puede atacarlas directamente. No te saltes este paso aunque el agua parezca poco verde."
+          },
+          {
+            "step": 3,
+            "title": "Cloración de choque progresiva",
+            "explication": "Este es el paso más importante y requiere elevar el cloro en varias fases:\n\n• FASE 1 – Primera noche: Añade cloro granulado (dicloro o tricloro granulado) para alcanzar 4 ppm de cloro libre. Disuelve el granulado en un cubo con agua antes de verterlo. Hazlo al atardecer para evitar que el sol lo degrade.\n\n• FASE 2 – Segunda noche: Mide el cloro libre. Si el agua sigue verde o el cloro ha bajado a menos de 1 ppm, sube hasta 6 ppm añadiendo más cloro.\n\n• FASE 3 – Si persiste: Si tras la segunda noche el agua aún no aclara, incrementa progresivamente (8–10 ppm) hasta ver resultados. El objetivo es mantener cloro activo en el agua durante suficiente tiempo para matar todas las algas."
+          },
+          {
+            "step": 4,
+            "title": "Filtración continua 12–24 horas",
+            "explication": "Mantén la depuradora funcionando sin interrupciones mientras dure el tratamiento. La filtración es lo que elimina físicamente las algas muertas del agua. Sin filtración continua, el cloro matará las algas pero permanecerán en suspensión, enturbiando el agua."
+          },
+          {
+            "step": 5,
+            "title": "Lavado del filtro",
+            "explication": "Una vez el agua empiece a aclarar, limpia el filtro para eliminar los restos de algas muertas acumulados. Filtro de arena/vidrio: realiza un BACKWASH de 2-3 min hasta ver el agua limpia en el visor, luego 1 min de RINSE. Filtro de cartucho: retíralo y límpialo con manguera a presión. Repite el lavado tantas veces como sea necesario durante el proceso."
+          }
         ]
       },
       "en": {
+        "description": "Water starts to look cloudy or has a slight green tint. This is the early stage of algae growth, usually caused by free chlorine dropping below 1 ppm, high pH, or insufficient filtration. Walls may feel slippery to the touch, which is the first sign of living algae. Acting at this stage is much easier and cheaper than waiting for the problem to worsen.",
         "procedure": [
-          {"step": 1, "title": "Measure initial values", "explication": "Measure pH and chlorine before taking action."},
-          {"step": 2, "title": "Adjust pH", "explication": "Adjust pH to 7.2–7.4."},
-          {"step": 3, "title": "Brushing", "explication": "Brush walls and floor to loosen algae."},
-          {"step": 4, "title": "Add shock chlorine", "explication": "Add chlorine up to 10 ppm."},
-          {"step": 5, "title": "Filter", "explication": "Filter continuously for 24 hours."},
-          {"step": 6, "title": "Clean filter", "explication": "Sand/Glass: BACKWASH 2-3 min + RINSE 30s–2min. Cartridge: hose clean."},
-          {"step": 7, "title": "Control measurement", "explication": "Measure pH and chlorine again."}
+          {
+            "step": 1,
+            "title": "Analyze and adjust pH to 7.2",
+            "explication": "Test pH with a reliable kit. For shock chlorine to be effective, pH must be at 7.2 (never above 7.4). If pH is high, add pH reducer around the perimeter with pump running and wait at least 2 hours before continuing. A pH of 7.8, for example, reduces chlorine effectiveness by more than 60%."
+          },
+          {
+            "step": 2,
+            "title": "Brush floor and walls",
+            "explication": "With the pump running, vigorously brush all surfaces: floor, walls, and corners. Algae cling to surfaces and brushing detaches them and puts them in suspension in the water, where chlorine can attack them directly. Do not skip this step even if the water seems only slightly green."
+          },
+          {
+            "step": 3,
+            "title": "Progressive shock chlorination",
+            "explication": "This is the most important step and requires raising chlorine in several phases:\n\n• PHASE 1 – First night: Add granular chlorine (dichlor or granular trichlor) to reach 4 ppm of free chlorine. Pre-dissolve granules in a bucket of water before pouring. Do this at sunset to prevent the sun from degrading it.\n\n• PHASE 2 – Second night: Test free chlorine. If water is still green or chlorine has dropped below 1 ppm, raise to 6 ppm by adding more chlorine.\n\n• PHASE 3 – If it persists: If after the second night the water still hasn't cleared, progressively increase (8–10 ppm) until you see results. The goal is to maintain active chlorine in the water long enough to kill all the algae."
+          },
+          {
+            "step": 4,
+            "title": "Continuous filtration 12–24 hours",
+            "explication": "Keep the pump running without interruption throughout the treatment. Filtration is what physically removes dead algae from the water. Without continuous filtration, chlorine will kill the algae but they will remain in suspension, keeping the water cloudy."
+          },
+          {
+            "step": 5,
+            "title": "Wash the filter",
+            "explication": "Once the water starts to clear, clean the filter to remove accumulated dead algae. Sand/glass filter: perform a 2-3 min BACKWASH until the sight glass shows clear water, then 1 min RINSE. Cartridge filter: remove and clean with high-pressure hose. Repeat washing as many times as needed throughout the process."
+          }
         ]
       }
     },
     "medium": {
       "es": {
+        "description": "El agua tiene un color verde claro o verde intenso pero el fondo todavía es visible. Hay una masa significativa de algas en el agua y probablemente en las superficies. El filtro se saturará rápido. Este nivel requiere un tratamiento más agresivo que el verde leve: dosis de cloro más altas, cepillado intensivo y limpieza frecuente del filtro. No se debe bañar nadie hasta resolver el problema.",
         "procedure": [
-          {"step": 1, "title": "Medir valores iniciales", "explication": "Medir pH y cloro."},
-          {"step": 2, "title": "Ajustar pH", "explication": "Ajustar pH correctamente."},
-          {"step": 3, "title": "Cepillado", "explication": "Cepillar toda la piscina."},
-          {"step": 4, "title": "Añadir cloro shock", "explication": "Añadir cloro fuerte (12-15 ppm)."},
-          {"step": 5, "title": "Filtrar", "explication": "Filtrar 24h continuas."},
-          {"step": 6, "title": "Limpieza del filtro durante el proceso", "explication": "Limpiar filtro cada 12-24h. Arena/vidrio: BACKWASH 2-3 min + RINSE 30s–2min. Cartucho: limpiar con manguera."},
-          {"step": 7, "title": "Añadir floculante", "explication": "Añadir floculante si sigue turbia."},
-          {"step": 8, "title": "Reposar y aspirar", "explication": "Dejar reposar y luego aspirar a desagüe."}
+          {
+            "step": 1,
+            "title": "Ajuste de pH estricto a 7.2",
+            "explication": "Mide y ajusta el pH a exactamente 7.2 antes de hacer nada más. Es el paso más importante: sin un pH correcto, el cloro de choque perderá gran parte de su eficacia. Añade reductor de pH repartido por el perímetro, filtra 2 horas y vuelve a medir. No continúes si el pH está por encima de 7.4."
+          },
+          {
+            "step": 2,
+            "title": "Cepillado intensivo de todas las superficies",
+            "explication": "Cepilla con fuerza y de forma sistemática todo el fondo, paredes, escaleras y esquinas. Las algas a este nivel forman colonias densas adheridas a las superficies. El cepillado rompe esas colonias y las pone en suspensión para que el cloro pueda eliminarlas. Dedica al menos 15-20 minutos a este paso."
+          },
+          {
+            "step": 3,
+            "title": "Super choque de cloro (dosis alta)",
+            "explication": "A este nivel necesitas dosis superiores a las del verde leve:\n\n• FASE 1 – Primera noche: Añade cloro para alcanzar 8–10 ppm de cloro libre. El agua debería empezar a cambiar de color verde a gris/blanquecino, lo que indica que las algas están muriendo.\n\n• FASE 2 – Segunda noche: Si el agua sigue verde o el cloro ha caído por debajo de 2 ppm, añade más cloro para volver a 8–10 ppm.\n\n• FASE 3 – Si persiste: Incrementa hasta 12–15 ppm y añade alguicida de choque para atacar las algas por dos vías simultáneamente.\n\nSiempre disuelve el cloro granulado en un cubo antes de añadirlo, y hazlo de noche."
+          },
+          {
+            "step": 4,
+            "title": "Filtración continua 24 horas",
+            "explication": "La depuradora debe funcionar sin parar durante todo el proceso. A este nivel de contaminación el filtro se saturará rápidamente, lo que reducirá el caudal y la efectividad. Vigila la presión del filtro y límpíalo cada vez que suba significativamente."
+          },
+          {
+            "step": 5,
+            "title": "Alguicida de mantenimiento",
+            "explication": "Añade una dosis de mantenimiento de alguicida (no de choque) para evitar que las algas supervivientes se reproduzcan mientras el cloro está actuando. El alguicida actúa de forma diferente al cloro y es útil como complemento, especialmente en casos de verde medio/severo. Sigue las instrucciones del fabricante para la dosis exacta según el volumen de tu piscina."
+          },
+          {
+            "step": 6,
+            "title": "Limpieza del filtro dos veces al día",
+            "explication": "Con tanta materia orgánica en el agua, el filtro se saturará muy rápido. Realiza el backwash (retrolavado) al menos 2 veces al día: por la mañana y por la tarde. Si en algún momento notas que el caudal ha bajado mucho, limpia el filtro inmediatamente aunque no hayan pasado las horas previstas. Un filtro saturado es prácticamente inútil."
+          }
         ]
       },
       "en": {
+        "description": "Water is clearly green but the pool floor is still visible. There is a significant mass of algae in the water and likely on the surfaces. The filter will clog quickly. This level requires more aggressive treatment than mild green: higher chlorine doses, intensive brushing, and frequent filter cleaning. No one should swim until the problem is resolved.",
         "procedure": [
-          {"step": 1, "title": "Measure initial values", "explication": "Measure pH and chlorine."},
-          {"step": 2, "title": "Adjust pH", "explication": "Correctly adjust pH."},
-          {"step": 3, "title": "Brushing", "explication": "Brush the entire pool."},
-          {"step": 4, "title": "Add shock chlorine", "explication": "Add strong chlorine (12–15 ppm)."},
-          {"step": 5, "title": "Filter", "explication": "Filter continuously for 24 hours."},
-          {"step": 6, "title": "Clean filter during process", "explication": "Clean filter every 12–24h. Sand/Glass: BACKWASH 2–3 min + RINSE 30s–2min. Cartridge: hose clean."},
-          {"step": 7, "title": "Add flocculant", "explication": "Add flocculant if water remains cloudy."},
-          {"step": 8, "title": "Rest and vacuum", "explication": "Let it rest, then vacuum to drain."}
+          {
+            "step": 1,
+            "title": "Strict pH adjustment to 7.2",
+            "explication": "Measure and adjust pH to exactly 7.2 before doing anything else. This is the most important step: without correct pH, shock chlorine will lose much of its effectiveness. Add pH reducer around the perimeter, filter for 2 hours and re-test. Do not continue if pH is above 7.4."
+          },
+          {
+            "step": 2,
+            "title": "Intensive brushing of all surfaces",
+            "explication": "Vigorously and systematically brush the entire floor, walls, steps, and corners. At this level, algae form dense colonies adhering to surfaces. Brushing breaks up those colonies and puts them in suspension so chlorine can eliminate them. Spend at least 15-20 minutes on this step."
+          },
+          {
+            "step": 3,
+            "title": "Super shock chlorine (high dose)",
+            "explication": "At this level you need higher doses than for mild green:\n\n• PHASE 1 – First night: Add chlorine to reach 8–10 ppm of free chlorine. Water should start changing from green to grey/whitish, indicating algae are dying.\n\n• PHASE 2 – Second night: If water is still green or chlorine has dropped below 2 ppm, add more chlorine to return to 8–10 ppm.\n\n• PHASE 3 – If it persists: Increase to 12–15 ppm and add shock algaecide to attack algae through two pathways simultaneously.\n\nAlways pre-dissolve granular chlorine in a bucket before adding, and always do it at night."
+          },
+          {
+            "step": 4,
+            "title": "Continuous filtration 24 hours",
+            "explication": "The pump must run continuously throughout the entire process. At this level of contamination the filter will clog quickly, reducing flow rate and effectiveness. Monitor filter pressure and clean it every time it rises significantly."
+          },
+          {
+            "step": 5,
+            "title": "Maintenance algaecide",
+            "explication": "Add a maintenance dose of algaecide (not shock dose) to prevent surviving algae from reproducing while chlorine is working. Algaecide works differently from chlorine and is useful as a complement, especially in medium/severe green cases. Follow manufacturer instructions for the exact dose based on your pool volume."
+          },
+          {
+            "step": 6,
+            "title": "Clean filter twice a day",
+            "explication": "With so much organic matter in the water, the filter will clog very quickly. Perform backwash at least twice a day: morning and afternoon. If at any point you notice reduced flow, clean the filter immediately even if the scheduled time hasn't passed. A clogged filter is practically useless."
+          }
         ]
       }
     },
     "severe": {
       "es": {
+        "description": "Agua de color verde oscuro o casi negro, opaca, y no se ve el fondo. Se denomina 'agua pantanosa'. Hay una proliferación masiva de algas y probablemente bacterias. La carga orgánica es tan alta que el cloro se agota en minutos. Este caso requiere un protocolo especial: no filtrar directamente (colapsaría el filtro al instante), sino floculación y vaciado parcial. Prepárate para un proceso de 2-4 días y un gasto importante de productos.",
         "procedure": [
-          {"step": 1, "title": "Medir valores iniciales", "explication": "Medir pH y cloro."},
-          {"step": 2, "title": "Ajustar pH", "explication": "Ajustar pH."},
-          {"step": 3, "title": "Cepillado intensivo", "explication": "Cepillado intensivo en toda la piscina."},
-          {"step": 4, "title": "Añadir cloro shock", "explication": "Añadir cloro fuerte (15-20 ppm)."},
-          {"step": 5, "title": "Filtrar", "explication": "Filtrar durante 48 horas seguidas."},
-          {"step": 6, "title": "Limpieza continua del filtro", "explication": "Arena/vidrio: BACKWASH 2-3 min + RINSE 30s–2min. Cartucho: limpiar con manguera varias veces durante la filtración."},
-          {"step": 7, "title": "Añadir floculante", "explication": "Añadir floculante."},
-          {"step": 8, "title": "Reposar", "explication": "Dejar reposar 24h sin filtrar."},
-          {"step": 9, "title": "Aspirado a desagüe", "explication": "Aspirar suciedad a desagüe (no al filtro)."},
-          {"step": 10, "title": "Medición final", "explication": "Volver a medir parámetros."}
+          {
+            "step": 1,
+            "title": "Ajuste de pH a 7.2",
+            "explication": "Incluso en este estado extremo, el pH debe ajustarse a 7.2 antes del tratamiento. Añade el reductor de pH con la bomba en marcha durante 30 minutos. Dado que el agua está muy cargada, puede ser difícil medir con precisión: usa un kit de análisis líquido en lugar de tiras reactivas para mayor fiabilidad."
+          },
+          {
+            "step": 2,
+            "title": "Tratamiento de choque masivo (dosis extrema)",
+            "explication": "A este nivel la carga orgánica es tan alta que necesitas dosis muy superiores a los niveles anteriores:\n\n• FASE 1 – Primera noche: Añade cloro para alcanzar 15–20 ppm de cloro libre. El agua debería empezar a cambiar de verde oscuro a verde claro o gris en las primeras horas.\n\n• FASE 2 – Segunda noche: Mide el cloro. Si ha bajado por debajo de 5 ppm, añade más para mantener el nivel por encima de 10 ppm. La materia orgánica consumirá el cloro muy rápidamente.\n\n• FASE 3 – Si persiste: Incrementa a 20–30 ppm. En casos extremos puede ser necesario añadir cloro varias veces al día para mantener un nivel efectivo.\n\nDisuelve siempre el granulado en cubo antes de verter. Hazlo de noche."
+          },
+          {
+            "step": 3,
+            "title": "Aplicación de floculante líquido",
+            "explication": "Cuando el agua empiece a cambiar a un color grisáceo (algas muertas en suspensión), PARA la bomba completamente. Añade floculante líquido repartiéndolo por toda la superficie de la piscina. El floculante agrupa todas las partículas microscópicas (algas muertas, suciedad) en copos más grandes y pesados que irán hundiéndose hasta el fondo. Usa la dosis recomendada por el fabricante según el volumen de agua."
+          },
+          {
+            "step": 4,
+            "title": "Reposo total 24 horas",
+            "explication": "Con la bomba completamente apagada, deja la piscina en reposo absoluto durante 24 horas. No camines por el borde, no entres al agua, no toques nada. El objetivo es dejar que toda la materia orgánica floculada decante y se deposite en el fondo formando una capa. Cuanto menos se mueva el agua, mejor será la decantación."
+          },
+          {
+            "step": 5,
+            "title": "Aspirado al desagüe (¡no al filtro!)",
+            "explication": "Tras las 24h verás una capa de sedimentos en el fondo. Ahora debes aspirarla con el limpiafondos manual, pero con el selector de válvula en posición DESAGÜE (waste/drain), nunca en posición filtro. Si aspiras al filtro con esta carga de suciedad, lo colapsarás al instante. Mueve el limpiafondos muy despacio para no remover los sedimentos. Perderás agua durante este proceso: es inevitable y está previsto. Si hay mucho sedimento, puede ser necesario repetir la floculación y el aspirado."
+          },
+          {
+            "step": 6,
+            "title": "Restaurar nivel, volver a tratar y filtrar",
+            "explication": "Rellena el agua perdida con agua de red. Vuelve a medir pH y cloro y ajusta de nuevo a los valores correctos (pH 7.2, cloro 2–3 ppm para mantenimiento). Activa la depuradora y filtra durante al menos 24 horas más, limpiando el filtro frecuentemente. Añade también una dosis de alguicida de mantenimiento para prevenir una nueva proliferación."
+          }
         ]
       },
       "en": {
+        "description": "Dark green or near-black, opaque water with the pool floor completely invisible. This is called 'swamp water'. There is a massive proliferation of algae and likely bacteria. The organic load is so high that chlorine is depleted in minutes. This case requires a special protocol: do not filter directly (it would collapse the filter instantly), but instead flocculate and partially drain. Prepare for a 2-4 day process and significant product costs.",
         "procedure": [
-          {"step": 1, "title": "Measure initial values", "explication": "Measure pH and chlorine."},
-          {"step": 2, "title": "Adjust pH", "explication": "Adjust pH."},
-          {"step": 3, "title": "Intensive brushing", "explication": "Brush the entire pool intensively."},
-          {"step": 4, "title": "Add shock chlorine", "explication": "Add strong chlorine (15–20 ppm)."},
-          {"step": 5, "title": "Filter", "explication": "Filter continuously for 48 hours."},
-          {"step": 6, "title": "Continuous filter cleaning", "explication": "Sand/Glass: BACKWASH 2–3 min + RINSE 30s–2min. Cartridge: hose clean several times during filtration."},
-          {"step": 7, "title": "Add flocculant", "explication": "Add flocculant."},
-          {"step": 8, "title": "Rest", "explication": "Let rest 24h without filtering."},
-          {"step": 9, "title": "Vacuum to drain", "explication": "Vacuum debris to drain (not filter)."},
-          {"step": 10, "title": "Final measurement", "explication": "Measure parameters again."}
+          {
+            "step": 1,
+            "title": "pH Adjustment to 7.2",
+            "explication": "Even in this extreme state, pH must be adjusted to 7.2 before treatment. Add pH reducer with pump running for 30 minutes. Since the water is heavily loaded, accurate measurement can be difficult: use a liquid test kit rather than test strips for greater reliability."
+          },
+          {
+            "step": 2,
+            "title": "Massive shock treatment (extreme dose)",
+            "explication": "At this level the organic load is so high that you need much higher doses than previous levels:\n\n• PHASE 1 – First night: Add chlorine to reach 15–20 ppm of free chlorine. Water should start changing from dark green to light green or grey within the first few hours.\n\n• PHASE 2 – Second night: Test chlorine. If it has dropped below 5 ppm, add more to keep the level above 10 ppm. Organic matter will consume chlorine very quickly.\n\n• PHASE 3 – If it persists: Increase to 20–30 ppm. In extreme cases it may be necessary to add chlorine several times a day to maintain an effective level.\n\nAlways pre-dissolve granules in a bucket before pouring. Always do it at night."
+          },
+          {
+            "step": 3,
+            "title": "Apply liquid flocculant",
+            "explication": "When the water starts to turn grey (dead algae in suspension), STOP the pump completely. Add liquid flocculant by distributing it across the entire pool surface. The flocculant groups all microscopic particles (dead algae, dirt) into larger, heavier flocs that will sink to the bottom. Use the manufacturer's recommended dose based on your pool volume."
+          },
+          {
+            "step": 4,
+            "title": "Complete rest for 24 hours",
+            "explication": "With the pump completely off, leave the pool in absolute rest for 24 hours. Do not walk around the edge, do not enter the water, do not touch anything. The goal is to let all the flocculated organic matter settle and deposit on the bottom forming a layer. The less the water moves, the better the settlement will be."
+          },
+          {
+            "step": 5,
+            "title": "Vacuum to waste (NOT to the filter!)",
+            "explication": "After 24h you will see a layer of sediment on the bottom. Now you must vacuum it with the manual pool vacuum, but with the valve selector in WASTE (drain) position, never in filter position. If you vacuum to the filter with this dirt load, you will clog it instantly. Move the vacuum very slowly to avoid disturbing the sediment. You will lose water during this process: it is unavoidable and expected. If there is a lot of sediment, it may be necessary to repeat the flocculation and vacuuming."
+          },
+          {
+            "step": 6,
+            "title": "Restore level, re-treat and filter",
+            "explication": "Refill lost water with tap water. Re-test pH and chlorine and adjust again to correct values (pH 7.2, chlorine 2–3 ppm for maintenance). Activate the pump and filter for at least 24 more hours, cleaning the filter frequently. Also add a maintenance dose of algaecide to prevent a new proliferation."
+          }
         ]
       }
     }
   },
-
   "whitish_water": {
     "es": {
+      "description": "El agua tiene un aspecto lechoso, opaco o blanquecino, pero sin el tono verde de las algas. Las causas más comunes son: pH elevado que provoca precipitación de carbonato cálcico (cal en suspensión), exceso de bañistas en poco tiempo, filtración insuficiente o mal mantenimiento del filtro. El agua puede parecer 'jabonosa'. Aunque no suele ser peligroso, indica un desequilibrio químico que hay que corregir.",
       "procedure": [
-        {"step": 1, "title": "Medir valores iniciales", "explication": "Medir pH y cloro."},
-        {"step": 2, "title": "Ajustar pH", "explication": "Ajustar pH entre 7.2 y 7.6."},
-        {"step": 3, "title": "Limpieza inicial del filtro", "explication": "Limpiar filtro antes de empezar. Arena/vidrio: BACKWASH 2-3 min + RINSE 30s–2min. Cartucho: limpiar con manguera."},
-        {"step": 4, "title": "Filtrar", "explication": "Filtrar 24-48 horas seguidas."},
-        {"step": 5, "title": "Cepillado", "explication": "Cepillar si hay partículas en paredes."},
-        {"step": 6, "title": "Limpieza del filtro", "explication": "Volver a limpiar filtro tras filtración. Arena/vidrio: BACKWASH 2-3 min + RINSE 30s–2min. Cartucho: limpiar con manguera."},
-        {"step": 7, "title": "Añadir floculante", "explication": "Añadir floculante si no mejora."},
-        {"step": 8, "title": "Reposar", "explication": "Dejar reposar 24h."},
-        {"step": 9, "title": "Aspirado a desagüe", "explication": "Aspirar a desagüe."}
+        {
+          "step": 1,
+          "title": "Verificar y corregir pH",
+          "explication": "El culpable más frecuente de la turbidez blanquecina es un pH superior a 7.8. A ese nivel, el calcio disuelto en el agua precipita en forma de partículas microscópicas blancas que enturbian el agua. Mide el pH y si está alto, añade reductor de pH (ácido clorhídrico o bisulfato sódico) repartido por el perímetro con la bomba en marcha. Filtra 2 horas y vuelve a medir. El objetivo es bajar a pH 7.2."
+        },
+        {
+          "step": 2,
+          "title": "Limpieza profunda del filtro",
+          "explication": "Antes de empezar la filtración intensiva, el filtro debe estar limpio. Un filtro sucio o saturado no puede retener las partículas finas que causan la turbidez. Filtro de arena/vidrio: realiza un BACKWASH completo hasta ver agua clara en el visor, luego 1 min de RINSE. Filtro de cartucho: extráelo y límpialo a fondo con manguera a presión, abriendo bien todos los pliegues."
+        },
+        {
+          "step": 3,
+          "title": "Filtración intensiva 48 horas",
+          "explication": "Pon la depuradora en marcha durante 48 horas continuas. La filtración prolongada es la forma principal de aclarar el agua blanquecina: el filtro va atrapando poco a poco todas las partículas en suspensión. No interrumpas la filtración durante este periodo. Revisa el filtro periódicamente y haz un backwash si notas que la presión sube."
+        },
+        {
+          "step": 4,
+          "title": "Floculante en skimmer",
+          "explication": "Para acelerar el proceso, introduce saquitos o tabletas de floculante directamente en el skimmer. El floculante agrupa las partículas más finas que el filtro solo no puede retener, formando copos más grandes que sí quedan atrapados. Si tienes filtro de cartucho, comprueba primero si el fabricante permite el uso de floculante con ese tipo de filtro, ya que algunos no son compatibles."
+        }
       ]
     },
     "en": {
+      "description": "Water has a milky, opaque, or whitish appearance, but without the green tint of algae. The most common causes are: high pH causing calcium carbonate precipitation (lime in suspension), excess bathers in a short time, insufficient filtration, or poor filter maintenance. The water may appear 'soapy'. While not usually dangerous, it indicates a chemical imbalance that needs correcting.",
       "procedure": [
-        {"step": 1, "title": "Measure initial values", "explication": "Measure pH and chlorine."},
-        {"step": 2, "title": "Adjust pH", "explication": "Adjust pH between 7.2 and 7.6."},
-        {"step": 3, "title": "Initial filter cleaning", "explication": "Clean filter before starting. Sand/Glass: BACKWASH 2–3 min + RINSE 30s–2min. Cartridge: hose clean."},
-        {"step": 4, "title": "Filter", "explication": "Filter continuously for 24–48 hours."},
-        {"step": 5, "title": "Brushing", "explication": "Brush if particles remain on walls."},
-        {"step": 6, "title": "Filter cleaning", "explication": "Clean filter again after filtering. Sand/Glass: BACKWASH 2–3 min + RINSE 30s–2min. Cartridge: hose clean."},
-        {"step": 7, "title": "Add flocculant", "explication": "Add flocculant if water does not improve."},
-        {"step": 8, "title": "Rest", "explication": "Let rest 24h."},
-        {"step": 9, "title": "Vacuum to drain", "explication": "Vacuum to drain."}
+        {
+          "step": 1,
+          "title": "Verify and correct pH",
+          "explication": "The most common cause of whitish cloudiness is pH above 7.8. At that level, calcium dissolved in the water precipitates as white microscopic particles that cloud the water. Test pH and if it's high, add pH reducer (muriatic acid or sodium bisulfate) around the perimeter with pump running. Filter for 2 hours and re-test. The goal is to lower to pH 7.2."
+        },
+        {
+          "step": 2,
+          "title": "Deep filter cleaning",
+          "explication": "Before starting intensive filtration, the filter must be clean. A dirty or clogged filter cannot retain the fine particles causing cloudiness. Sand/glass filter: perform a full BACKWASH until the sight glass shows clear water, then 1 min RINSE. Cartridge filter: remove and clean thoroughly with high-pressure hose, opening all the folds well."
+        },
+        {
+          "step": 3,
+          "title": "Intensive filtration 48 hours",
+          "explication": "Run the pump for 48 continuous hours. Prolonged filtration is the main way to clear whitish water: the filter gradually traps all suspended particles. Do not interrupt filtration during this period. Check the filter periodically and backwash if you notice pressure rising."
+        },
+        {
+          "step": 4,
+          "title": "Flocculant in skimmer",
+          "explication": "To speed up the process, place flocculant bags or tablets directly in the skimmer. The flocculant groups the finest particles that the filter alone cannot retain, forming larger flocs that do get trapped. If you have a cartridge filter, first check whether the manufacturer allows flocculant use with that filter type, as some are not compatible."
+        }
       ]
     }
   },
-
   "scale": {
     "es": {
+      "description": "Las incrustaciones calcáreas son depósitos blancos, rugosos y duros que aparecen en la línea de flotación, paredes, escaleras y accesorios metálicos. Se forman cuando el pH es demasiado alto (por encima de 7.8) y la dureza del agua es elevada, lo que provoca que el calcio disuelto precipite y se deposite sobre las superficies. También pueden aparecer alrededor de los inyectores si se añaden los productos directamente sin disolver. Son difíciles de eliminar una vez formadas y es mucho mejor prevenirlas.",
       "procedure": [
-        {"step": 1, "title": "Medir valores iniciales", "explication": "Medir pH."},
-        {"step": 2, "title": "Ajustar pH", "explication": "Bajar pH si está alto."},
-        {"step": 3, "title": "Cepillado", "explication": "Cepillar zonas con sarro."},
-        {"step": 4, "title": "Filtrar", "explication": "Filtrar tras el cepillado."},
-        {"step": 5, "title": "Limpiar filtro", "explication": "Limpiar filtro para eliminar residuos. Arena/vidrio: BACKWASH 2–3 min + RINSE 30s–2min. Cartucho: limpiar con manguera."}
+        {
+          "step": 1,
+          "title": "Bajar el pH al límite inferior (7.0–7.2)",
+          "explication": "La clave para disolver las incrustaciones ya existentes es mantener el pH en el límite más bajo del rango recomendado: entre 7.0 y 7.2. A este pH ligeramente ácido, el agua tiene capacidad de disolver lentamente los depósitos de carbonato cálcico. Añade reductor de pH (ácido clorhídrico o bisulfato sódico) y mantenlo así durante varias semanas. No bajes por debajo de 7.0 o podrías dañar los materiales de la piscina."
+        },
+        {
+          "step": 2,
+          "title": "Añadir secuestrante de cal (anticalcáreo)",
+          "explication": "El secuestrante de cal es un producto específico que 'captura' los iones de calcio en suspensión impidiéndoles precipitar y depositarse. Añádelo siguiendo las instrucciones del fabricante para la dosis según el volumen de tu piscina. Este producto actúa tanto para disolver incrustaciones existentes como para prevenir la formación de nuevas. Es especialmente útil en zonas con agua muy dura (alta en calcio y magnesio)."
+        },
+        {
+          "step": 3,
+          "title": "Cepillado manual de las zonas afectadas",
+          "explication": "Cepilla con fuerza las zonas con incrustaciones usando un cepillo de nylon (nunca metálico en piscinas de liner o fibra). El pH bajo y el secuestrante ablandarán los depósitos, y el cepillado mecánico los desprende. Si las incrustaciones son muy duras y resistentes, puede ser necesario bajar el nivel del agua y aplicar un limpiador ácido profesional directamente sobre la superficie afectada, siguiendo estrictamente las instrucciones del producto. Para incrustaciones en accesorios metálicos desmontables, pueden sumergirse en una solución diluida de ácido."
+        }
       ]
     },
     "en": {
+      "description": "Calcium scale deposits are white, rough, hard deposits that appear at the waterline, on walls, steps, and metal fittings. They form when pH is too high (above 7.8) and water hardness is elevated, causing dissolved calcium to precipitate and deposit on surfaces. They can also appear around injectors if products are added directly without dissolving. They are difficult to remove once formed and prevention is much better than cure.",
       "procedure": [
-        {"step": 1, "title": "Measure initial values", "explication": "Measure pH."},
-        {"step": 2, "title": "Adjust pH", "explication": "Lower pH if too high."},
-        {"step": 3, "title": "Brushing", "explication": "Brush areas with scale."},
-        {"step": 4, "title": "Filter", "explication": "Filter after brushing."},
-        {"step": 5, "title": "Clean filter", "explication": "Clean filter to remove residues. Sand/Glass: BACKWASH 2–3 min + RINSE 30s–2min. Cartridge: hose clean."}
+        {
+          "step": 1,
+          "title": "Lower pH to the lower limit (7.0–7.2)",
+          "explication": "The key to dissolving existing scale is to keep pH at the lowest end of the recommended range: between 7.0 and 7.2. At this slightly acidic pH, the water has the capacity to slowly dissolve calcium carbonate deposits. Add pH reducer (muriatic acid or sodium bisulfate) and maintain it like this for several weeks. Do not go below 7.0 or you could damage pool materials."
+        },
+        {
+          "step": 2,
+          "title": "Add scale sequestering agent (anti-scale)",
+          "explication": "The scale sequestering agent is a specific product that 'captures' calcium ions in suspension, preventing them from precipitating and depositing. Add it following manufacturer instructions for the dose based on your pool volume. This product works both to dissolve existing scale and to prevent new formation. It is especially useful in areas with very hard water (high in calcium and magnesium)."
+        },
+        {
+          "step": 3,
+          "title": "Manual brushing of affected areas",
+          "explication": "Vigorously brush areas with scale using a nylon brush (never metal on liner or fiberglass pools). The low pH and sequestering agent will soften the deposits, and mechanical brushing dislodges them. If scale is very hard and resistant, it may be necessary to lower the water level and apply a professional acid cleaner directly to the affected surface, strictly following product instructions. For scale on removable metal fittings, they can be submerged in a diluted acid solution."
+        }
       ]
     }
   },
-
   "ph_high": {
     "es": {
+      "description": "El pH es la medida de la acidez o alcalinidad del agua, en una escala de 0 a 14. El rango ideal para una piscina es 7.2–7.6. Cuando el pH sube por encima de 7.6, el cloro pierde eficacia progresivamente: a pH 7.8 el cloro libre disponible se reduce a la mitad, y a pH 8.0 solo queda activo un 20%. Además, un pH alto provoca irritación ocular, enturbiamiento del agua y favorece la formación de incrustaciones calcáreas. Las causas más frecuentes son: el pH natural del agua de red (suele ser alcalina), el uso de pastillas de tricloro (que tienden a subir el pH) y la evaporación.",
       "procedure": [
-        {"step": 1, "title": "Medir valores iniciales", "explication": "Medir pH."},
-        {"step": 2, "title": "Añadir corrector de pH", "explication": "Añadir ácido para bajarlo."},
-        {"step": 3, "title": "Filtrar", "explication": "Filtrar durante varias horas."},
-        {"step": 4, "title": "Medición de control", "explication": "Volver a medir."},
-        {"step": 5, "title": "Revisión del filtro", "explication": "Limpiar filtro si ha habido mucha suciedad. Arena/vidrio: BACKWASH 2–3 min + RINSE 30s–2min. Cartucho: limpiar con manguera."}
+        {
+          "step": 1,
+          "title": "Medir el pH con precisión",
+          "explication": "Usa un kit de análisis líquido o un medidor digital (pH-metro) para confirmar el valor actual. Las tiras reactivas son menos fiables. Toma la muestra de agua a unos 30-40 cm de profundidad, lejos de los inyectores y el skimmer. Anota el valor exacto: lo necesitarás para calcular la dosis de reductor."
+        },
+        {
+          "step": 2,
+          "title": "Añadir reductor de pH",
+          "explication": "Los reductores de pH más comunes son el ácido clorhídrico (líquido, muy potente, requiere precaución) y el bisulfato sódico (granulado, más fácil de manejar). Calcula la dosis según el volumen de tu piscina y el valor de pH que quieres corregir (consulta la tabla del fabricante). Añade el producto repartido por el perímetro de la piscina con la bomba en marcha, NUNCA lo viertas en un solo punto. Si usas ácido líquido, viértelo despacio y con cuidado. Es mejor quedarse corto y repetir que pasarse."
+        },
+        {
+          "step": 3,
+          "title": "Recircular 2-4 horas",
+          "explication": "Mantén la bomba en marcha durante 2 a 4 horas para que el reductor se mezcle de manera homogénea por todo el volumen de agua. No tomes la muestra para medir justo después de añadir el producto: el resultado no sería representativo."
+        },
+        {
+          "step": 4,
+          "title": "Comprobar y repetir si es necesario",
+          "explication": "Pasadas las horas de recirculación, mide el pH de nuevo. Si sigue por encima de 7.4, añade una nueva dosis de reductor y repite el proceso. Es preferible hacerlo en varios pasos pequeños que añadir una gran cantidad de golpe, para evitar bajar demasiado el pH y tener que corregirlo en el otro sentido. El objetivo es estabilizarlo en el rango 7.2–7.4."
+        }
       ]
     },
     "en": {
+      "description": "pH measures the acidity or alkalinity of water, on a scale of 0 to 14. The ideal range for a pool is 7.2–7.6. When pH rises above 7.6, chlorine progressively loses effectiveness: at pH 7.8 available free chlorine is halved, and at pH 8.0 only 20% remains active. Additionally, high pH causes eye irritation, water cloudiness, and promotes calcium scale formation. The most common causes are: the natural pH of tap water (usually alkaline), the use of trichlor tablets (which tend to raise pH), and evaporation.",
       "procedure": [
-        {"step": 1, "title": "Measure initial values", "explication": "Measure pH."},
-        {"step": 2, "title": "Add pH corrector", "explication": "Add acid to lower pH."},
-        {"step": 3, "title": "Filter", "explication": "Filter for several hours."},
-        {"step": 4, "title": "Control measurement", "explication": "Measure again."},
-        {"step": 5, "title": "Filter review", "explication": "Clean filter if very dirty. Sand/Glass: BACKWASH 2–3 min + RINSE 30s–2min. Cartridge: hose clean."}
+        {
+          "step": 1,
+          "title": "Measure pH accurately",
+          "explication": "Use a liquid test kit or digital meter (pH meter) to confirm the current value. Test strips are less reliable. Take the water sample at about 30-40 cm depth, away from injectors and skimmer. Note the exact value: you'll need it to calculate the reducer dose."
+        },
+        {
+          "step": 2,
+          "title": "Add pH reducer",
+          "explication": "The most common pH reducers are muriatic acid (liquid, very potent, requires caution) and sodium bisulfate (granular, easier to handle). Calculate the dose based on your pool volume and the pH value you want to correct (consult the manufacturer's dosage chart). Add the product distributed around the pool perimeter with the pump running, NEVER pour it in a single spot. If using liquid acid, pour it slowly and carefully. It's better to underdose and repeat than to overdose."
+        },
+        {
+          "step": 3,
+          "title": "Recirculate 2-4 hours",
+          "explication": "Keep the pump running for 2 to 4 hours so the reducer mixes evenly throughout the entire water volume. Do not take a sample to measure right after adding the product: the result would not be representative."
+        },
+        {
+          "step": 4,
+          "title": "Check and repeat if necessary",
+          "explication": "After the recirculation hours, test pH again. If still above 7.4, add a new dose of reducer and repeat the process. It is preferable to do this in several small steps rather than adding a large amount at once, to avoid lowering pH too much and having to correct it in the other direction. The goal is to stabilize it in the 7.2–7.4 range."
+        }
       ]
     }
   },
-
   "general_rules": {
     "es": {
-      "description": "Orden correcto SIEMPRE",
-      "steps": ["1. Medir","2. Ajustar pH","3. Cepillar","4. Añadir químicos","5. Filtrar","6. Limpiar filtro","7. Medir otra vez","8. Aspirar","9. Ajuste final"]
+      "description": "Orden correcto de actuación para cualquier tratamiento químico en la piscina. Seguir este orden garantiza que cada paso potencie el siguiente y que los productos sean lo más eficaces posible.",
+      "steps": [
+        "1. Limpieza física (hojas y cestos) — Elimina la suciedad visible para reducir la carga orgánica antes de añadir cualquier producto.",
+        "2. Ajuste de pH (Base de todo) — Sin pH correcto (7.2–7.4) el cloro y demás productos pierden gran parte de su eficacia.",
+        "3. Tratamiento de choque (si es necesario) — Una vez el pH es correcto, el choque de cloro actúa al máximo de su potencial.",
+        "4. Filtración intensiva — La filtración elimina físicamente las partículas muertas y distribuye los productos por todo el agua.",
+        "5. Limpieza de filtro (Lavado/Backwash) — Un filtro sucio anula todo el trabajo anterior. Límpialo siempre tras los tratamientos.",
+        "6. Medición de control — Verifica siempre los valores finales antes de dar el baño por seguro."
+      ]
     },
     "en": {
-      "description": "Always follow this correct order",
-      "steps": ["1. Measure","2. Adjust pH","3. Brush","4. Add chemicals","5. Filter","6. Clean filter","7. Measure again","8. Vacuum","9. Final adjustment"]
+      "description": "Correct order of action for any chemical treatment in the pool. Following this order ensures each step enhances the next and that products are as effective as possible.",
+      "steps": [
+        "1. Physical cleaning (leaves and baskets) — Remove visible dirt to reduce organic load before adding any product.",
+        "2. pH Adjustment (The foundation) — Without correct pH (7.2–7.4), chlorine and other products lose much of their effectiveness.",
+        "3. Shock treatment (if necessary) — Once pH is correct, chlorine shock works at its maximum potential.",
+        "4. Intensive filtration — Filtration physically removes dead particles and distributes products throughout all the water.",
+        "5. Filter cleaning (Backwash) — A dirty filter undoes all previous work. Always clean it after treatments.",
+        "6. Control measurement — Always verify final values before declaring swimming safe."
+      ]
     }
   }
 }

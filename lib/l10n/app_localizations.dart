@@ -964,6 +964,36 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'History'**
   String get history;
+
+  /// No description provided for @alkalinity.
+  ///
+  /// In en, this message translates to:
+  /// **'Alkalinity'**
+  String get alkalinity;
+
+  /// No description provided for @temperature.
+  ///
+  /// In en, this message translates to:
+  /// **'Temperature'**
+  String get temperature;
+
+  /// No description provided for @stabilizer.
+  ///
+  /// In en, this message translates to:
+  /// **'Stabilizer'**
+  String get stabilizer;
+
+  /// No description provided for @hardness.
+  ///
+  /// In en, this message translates to:
+  /// **'Hardness'**
+  String get hardness;
+
+  /// No description provided for @addMeasurementOrTreatment.
+  ///
+  /// In en, this message translates to:
+  /// **'Add measurement or treatment'**
+  String get addMeasurementOrTreatment;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

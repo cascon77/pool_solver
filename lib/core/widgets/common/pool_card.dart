@@ -5,6 +5,7 @@ import 'package:pool_solution/l10n/app_localizations.dart';
 
 class PoolCard extends StatelessWidget {
   final PoolEntity pool;
+
   const PoolCard({super.key, required this.pool});
 
   @override
@@ -58,17 +59,17 @@ class PoolCard extends StatelessWidget {
                     _buildInfoRow(
                       context,
                       Icons.water_drop_outlined,
-                      "${pool.volumeLiters?.toStringAsFixed(0) ?? '0'} L",
+                      "${pool.volumeLiters?.toStringAsFixed(0) ?? '0'}${l10n.liters}",
                     ),
                     _buildInfoRow(
                       context,
                       Icons.waves_rounded,
-                      pool.waterType?.toString().split('.').last ?? "N/A",
+                      _getWaterTypeLabel(pool.waterType, l10n),
                     ),
                     _buildInfoRow(
                       context,
                       Icons.filter_alt_rounded,
-                      pool.filterType?.toString().split('.').last ?? "N/A",
+                      _getFilterTypeLabel(pool.filterType, l10n),
                     ),
                   ],
                 ),
@@ -84,22 +85,40 @@ class PoolCard extends StatelessWidget {
     );
   }
 
+  String _getWaterTypeLabel(WaterType? type, AppLocalizations l10n) {
+    if (type == null) return l10n.notAvailable;
+    switch (type) {
+      case WaterType.chlorine:
+        return l10n.chlorine;
+      case WaterType.salt:
+        return l10n.salt;
+    }
+  }
+
+  String _getFilterTypeLabel(FilterType? type, AppLocalizations l10n) {
+    if (type == null) return l10n.notAvailable;
+    switch (type) {
+      case FilterType.sand:
+        return l10n.sand;
+      case FilterType.cartridge:
+        return l10n.cartridge;
+      case FilterType.glass:
+        return l10n.glass;
+    }
+  }
+
   Widget _buildInfoRow(BuildContext context, IconData icon, String label) {
     return Padding(
       padding: const EdgeInsets.only(top: 2),
       child: Row(
         children: [
-          Icon(
-            icon,
-            size: 14,
-            color: AppColors.primaryAccent,
-          ),
+          Icon(icon, size: 14, color: AppColors.primaryAccent),
           const SizedBox(width: 6),
           Text(
             label,
-            style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                  color: AppColors.textSecondary,
-                ),
+            style: Theme.of(
+              context,
+            ).textTheme.bodySmall?.copyWith(color: AppColors.textSecondary),
           ),
         ],
       ),

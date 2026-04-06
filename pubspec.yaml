@@ -25,6 +25,7 @@ dependencies:
   path: ^1.9.1
   drift_dev: ^2.29.0
   build_runner: ^2.7.1
+  shared_preferences: ^2.5.5
 
 dev_dependencies:
   flutter_test:
