@@ -453,6 +453,36 @@ class AppLocalizationsEn extends AppLocalizations {
   String get alkalinity => 'Alkalinity';
 
   @override
+  String get alkalinityDesc => 'Total alkalinity acts as a \'buffer\' for pH. If it is low, the pH will fluctuate wildly; if it is high, the pH will be very difficult to adjust.';
+
+  @override
+  String get alkalinityCurrentPpm => 'Current alkalinity (ppm)';
+
+  @override
+  String get alkalinityTargetPpm => 'Target alkalinity (ppm)';
+
+  @override
+  String get chloramines => 'Chloramines';
+
+  @override
+  String get chloraminesDesc => 'Combined chlorine (chloramines) causes strong \'chlorine smell\' and irritation. To eliminate it, a shock treatment or \'breakpoint chlorination\' is required.';
+
+  @override
+  String get chloraminesTotal => 'Total Chlorine (ppm)';
+
+  @override
+  String get chloraminesFree => 'Free Chlorine (ppm)';
+
+  @override
+  String get chloraminesCombined => 'Combined Chlorine';
+
+  @override
+  String get chloraminesAcceptable => 'Chloramines level is acceptable (< 0.5 ppm). No shock required.';
+
+  @override
+  String get shockDoseLabel => 'Calcium Hypochlorite (65%) for shock';
+
+  @override
   String get temperature => 'Temperature';
 
   @override
@@ -496,4 +526,70 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get addMeasurementOrTreatment => 'Add measurement or treatment';
+
+  @override
+  String get phReducer => 'pH reducer';
+
+  @override
+  String get turbidityLevel => 'Turbidity level';
+
+  @override
+  String get low => 'Low';
+
+  @override
+  String get medium => 'Medium';
+
+  @override
+  String get high => 'High';
+
+  @override
+  String get productSulfatoAluminio => 'Aluminum Sulfate';
+
+  @override
+  String get productFloculanteLiquido => 'Liquid Flocculant';
+
+  @override
+  String get productClarificante => 'Concentrated Clarifier';
+
+  @override
+  String get flocculantDesc => 'Flocculant clumps together tiny particles that cloud the water so they can be filtered or vacuumed.';
+
+  @override
+  String get cloroCalcDescription => 'Chlorine is the most common disinfectant for pools. Maintaining proper levels (1-3 ppm) is essential to kill bacteria and prevent algae. High bather load or sunlight consume chlorine quickly.';
+
+  @override
+  String get initialCl => 'Current Chlorine (ppm)';
+
+  @override
+  String get targetCl => 'Target Chlorine (ppm)';
+
+  @override
+  String get bathers => 'Bathers today';
+
+  @override
+  String get productTricloroGranulado => 'Granular Trichlor';
+
+  @override
+  String get productDicloro => 'Dichlor (Granular or powder)';
+
+  @override
+  String get productHipocloritoCalcio => 'Calcium Hypochlorite (Granular or powder)';
+
+  @override
+  String get productCloroLiquido => 'Liquid Chlorine (Bleach or lye)';
+
+  @override
+  String get productTricloroTabletas => 'Trichlor Tablets (Weekly)';
+
+  @override
+  String get concentration => 'Concentration (%)';
+
+  @override
+  String get tabletSize => 'Grams per tablet';
+
+  @override
+  String get resultTablets => 'Tablets to add';
+
+  @override
+  String get resultLiters => 'Liters to add';
 }

@@ -5,6 +5,7 @@ import 'package:pool_solution/core/widgets/common/numeric_step_input.dart';
 import 'package:pool_solution/core/widgets/common/volume_info_card.dart';
 import 'package:pool_solution/core/widgets/common/result_card.dart';
 import 'package:pool_solution/domain/entities/entities.dart';
+import 'package:pool_solution/domain/services/ph_calculator_service.dart';
 import 'package:pool_solution/l10n/app_localizations.dart';
 
 class CalcPhScreen extends StatefulWidget {
@@ -80,7 +81,10 @@ class _CalcPhScreenState extends State<CalcPhScreen> {
                           min: 0.0,
                           max: 14.0,
                           controller: _currentPhController,
-                          onChanged: (val) => setState(() => _currentPh = val),
+                          onChanged: (val) => setState(() {
+                            _currentPh = val;
+                            _handlePhChange();
+                          }),
                         ),
                       ),
                       const SizedBox(width: 12),
@@ -92,7 +96,10 @@ class _CalcPhScreenState extends State<CalcPhScreen> {
                           min: 0.0,
                           max: 14.0,
                           controller: _targetPhController,
-                          onChanged: (val) => setState(() => _targetPh = val),
+                          onChanged: (val) => setState(() {
+                            _targetPh = val;
+                            _handlePhChange();
+                          }),
                         ),
                       ),
                     ],
@@ -154,11 +161,18 @@ class _CalcPhScreenState extends State<CalcPhScreen> {
   }
 
   Widget _buildProductSelector(AppLocalizations l10n, bool isDark) {
-    final products = {
+    final isDecreasing = _targetPh < _currentPh;
+    
+    final allProducts = {
       'bicarbonate': {'name': l10n.sodiumBicarbonate, 'color': Colors.blue},
       'carbonate': {'name': l10n.sodiumCarbonate, 'color': Colors.orange},
       'caustic': {'name': l10n.causticSoda, 'color': Colors.red},
+      'reducer': {'name': l10n.phReducer, 'color': Colors.purple},
     };
+
+    final products = Map.fromEntries(
+      allProducts.entries.where((e) => isDecreasing ? e.key == 'reducer' : e.key != 'reducer')
+    );
 
     return Column(
       children: products.entries.map((entry) {
@@ -204,33 +218,31 @@ class _CalcPhScreenState extends State<CalcPhScreen> {
   void _calculateTreatment() {
     if (_selectedProduct == null) return;
 
-    final diff = _targetPh - _currentPh;
-    if (diff <= 0) {
-      setState(() => _result = 0);
-      return;
-    }
-
-    // Factores técnicos: Gramos necesarios para subir 1.0 pH en 1 m3
-    double productFactor = 0;
-    switch (_selectedProduct) {
-      case 'bicarbonate': productFactor = 160.0; break; 
-      case 'carbonate':   productFactor = 90.0;  break; 
-      case 'caustic':     productFactor = 40.0;  break; 
-    }
-
-    final volumeM3 = (widget.pool.volumeLiters ?? 0) / 1000;
+    final service = PhCalculatorService();
     
-    // Ajuste por Alcalinidad (Efecto Tampón / Buffer)
-    // El punto de equilibrio es 100 ppm. 
-    double alkFactor = 1.0 + (_alkalinity - 100) / 500;
-    alkFactor = alkFactor.clamp(0.8, 1.4);
-
-    double grams = diff * volumeM3 * productFactor * alkFactor;
+    final grams = service.calculate(
+      volumeLiters: widget.pool.volumeLiters ?? 0.0,
+      currentPh: _currentPh,
+      targetPh: _targetPh,
+      alkalinity: _alkalinity,
+      productKey: _selectedProduct!,
+    );
 
     setState(() {
       _result = grams;
     });
     
     FocusScope.of(context).unfocus();
+  }
+
+  void _handlePhChange() {
+    final isDecreasing = _targetPh < _currentPh;
+    if (isDecreasing) {
+      _selectedProduct = 'reducer';
+    } else {
+      if (_selectedProduct == 'reducer') {
+        _selectedProduct = null;
+      }
+    }
   }
 }

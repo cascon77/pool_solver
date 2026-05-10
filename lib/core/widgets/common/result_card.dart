@@ -73,7 +73,9 @@ class ResultCard extends StatelessWidget {
                   ),
                 ),
                 Text(
-                  "${result.toStringAsFixed(0)} $unit",
+                  unit == "L"
+                      ? "${result.toStringAsFixed(2).replaceAll('.', ',')} $unit"
+                      : "${result.toStringAsFixed(0)}${unit.isEmpty ? '' : ' $unit'}",
                   style: const TextStyle(
                     fontSize: 32,
                     fontWeight: FontWeight.w900,

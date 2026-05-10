@@ -453,6 +453,36 @@ class AppLocalizationsEs extends AppLocalizations {
   String get alkalinity => 'Alcalinidad';
 
   @override
+  String get alkalinityDesc => 'La alcalinidad total actúa como un \'escudo\' para el pH. Si es baja, el pH fluctuará bruscamente; si es alta, el pH será muy difícil de ajustar.';
+
+  @override
+  String get alkalinityCurrentPpm => 'Alcalinidad actual (ppm)';
+
+  @override
+  String get alkalinityTargetPpm => 'Alcalinidad objetivo (ppm)';
+
+  @override
+  String get chloramines => 'Cloraminas';
+
+  @override
+  String get chloraminesDesc => 'El cloro combinado (cloraminas) causa el fuerte \'olor a cloro\' e irritación. Para eliminarlo se requiere un tratamiento de choque o \'cloración a punto de ruptura\'.';
+
+  @override
+  String get chloraminesTotal => 'Cloro Total (ppm)';
+
+  @override
+  String get chloraminesFree => 'Cloro Libre (ppm)';
+
+  @override
+  String get chloraminesCombined => 'Cloro Combinado';
+
+  @override
+  String get chloraminesAcceptable => 'El nivel de cloraminas es aceptable (< 0.5 ppm). No se requiere choque.';
+
+  @override
+  String get shockDoseLabel => 'Hipoclorito de Calcio (65%) para choque';
+
+  @override
   String get temperature => 'Temperatura';
 
   @override
@@ -496,4 +526,70 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get addMeasurementOrTreatment => 'Añadir medición o tratamiento';
+
+  @override
+  String get phReducer => 'Reductor de pH';
+
+  @override
+  String get turbidityLevel => 'Nivel de turbidez';
+
+  @override
+  String get low => 'Poca';
+
+  @override
+  String get medium => 'Media';
+
+  @override
+  String get high => 'Mucha';
+
+  @override
+  String get productSulfatoAluminio => 'Sulfato de Aluminio';
+
+  @override
+  String get productFloculanteLiquido => 'Floculante Líquido';
+
+  @override
+  String get productClarificante => 'Clarificante Concentrado';
+
+  @override
+  String get flocculantDesc => 'El floculante agrupa las partículas diminutas que enturbian el agua para que puedan ser filtradas o aspiradas.';
+
+  @override
+  String get cloroCalcDescription => 'El cloro es el desinfectante más común para piscinas. Mantener niveles adecuados (1-3 ppm) es esencial para eliminar bacterias y prevenir algas. El exceso de bañistas o la luz solar consumen el cloro rápidamente.';
+
+  @override
+  String get initialCl => 'Cloro actual (ppm)';
+
+  @override
+  String get targetCl => 'Cloro objetivo (ppm)';
+
+  @override
+  String get bathers => 'Bañistas hoy';
+
+  @override
+  String get productTricloroGranulado => 'Tricloro Granulado';
+
+  @override
+  String get productDicloro => 'Dicloro (Granulado o polvo)';
+
+  @override
+  String get productHipocloritoCalcio => 'Hipoclorito de Calcio (Granulado o polvo)';
+
+  @override
+  String get productCloroLiquido => 'Cloro Líquido (Lavandina o lejía)';
+
+  @override
+  String get productTricloroTabletas => 'Tricloro en Tabletas (Semanal)';
+
+  @override
+  String get concentration => 'Concentración (%)';
+
+  @override
+  String get tabletSize => 'Gramos por tableta';
+
+  @override
+  String get resultTablets => 'Tabletas a añadir';
+
+  @override
+  String get resultLiters => 'Litros a añadir';
 }

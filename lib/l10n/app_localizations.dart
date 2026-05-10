@@ -983,6 +983,66 @@ abstract class AppLocalizations {
   /// **'Alkalinity'**
   String get alkalinity;
 
+  /// No description provided for @alkalinityDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'Total alkalinity acts as a \'buffer\' for pH. If it is low, the pH will fluctuate wildly; if it is high, the pH will be very difficult to adjust.'**
+  String get alkalinityDesc;
+
+  /// No description provided for @alkalinityCurrentPpm.
+  ///
+  /// In en, this message translates to:
+  /// **'Current alkalinity (ppm)'**
+  String get alkalinityCurrentPpm;
+
+  /// No description provided for @alkalinityTargetPpm.
+  ///
+  /// In en, this message translates to:
+  /// **'Target alkalinity (ppm)'**
+  String get alkalinityTargetPpm;
+
+  /// No description provided for @chloramines.
+  ///
+  /// In en, this message translates to:
+  /// **'Chloramines'**
+  String get chloramines;
+
+  /// No description provided for @chloraminesDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'Combined chlorine (chloramines) causes strong \'chlorine smell\' and irritation. To eliminate it, a shock treatment or \'breakpoint chlorination\' is required.'**
+  String get chloraminesDesc;
+
+  /// No description provided for @chloraminesTotal.
+  ///
+  /// In en, this message translates to:
+  /// **'Total Chlorine (ppm)'**
+  String get chloraminesTotal;
+
+  /// No description provided for @chloraminesFree.
+  ///
+  /// In en, this message translates to:
+  /// **'Free Chlorine (ppm)'**
+  String get chloraminesFree;
+
+  /// No description provided for @chloraminesCombined.
+  ///
+  /// In en, this message translates to:
+  /// **'Combined Chlorine'**
+  String get chloraminesCombined;
+
+  /// No description provided for @chloraminesAcceptable.
+  ///
+  /// In en, this message translates to:
+  /// **'Chloramines level is acceptable (< 0.5 ppm). No shock required.'**
+  String get chloraminesAcceptable;
+
+  /// No description provided for @shockDoseLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Calcium Hypochlorite (65%) for shock'**
+  String get shockDoseLabel;
+
   /// No description provided for @temperature.
   ///
   /// In en, this message translates to:
@@ -1072,6 +1132,138 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Add measurement or treatment'**
   String get addMeasurementOrTreatment;
+
+  /// No description provided for @phReducer.
+  ///
+  /// In en, this message translates to:
+  /// **'pH reducer'**
+  String get phReducer;
+
+  /// No description provided for @turbidityLevel.
+  ///
+  /// In en, this message translates to:
+  /// **'Turbidity level'**
+  String get turbidityLevel;
+
+  /// No description provided for @low.
+  ///
+  /// In en, this message translates to:
+  /// **'Low'**
+  String get low;
+
+  /// No description provided for @medium.
+  ///
+  /// In en, this message translates to:
+  /// **'Medium'**
+  String get medium;
+
+  /// No description provided for @high.
+  ///
+  /// In en, this message translates to:
+  /// **'High'**
+  String get high;
+
+  /// No description provided for @productSulfatoAluminio.
+  ///
+  /// In en, this message translates to:
+  /// **'Aluminum Sulfate'**
+  String get productSulfatoAluminio;
+
+  /// No description provided for @productFloculanteLiquido.
+  ///
+  /// In en, this message translates to:
+  /// **'Liquid Flocculant'**
+  String get productFloculanteLiquido;
+
+  /// No description provided for @productClarificante.
+  ///
+  /// In en, this message translates to:
+  /// **'Concentrated Clarifier'**
+  String get productClarificante;
+
+  /// No description provided for @flocculantDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'Flocculant clumps together tiny particles that cloud the water so they can be filtered or vacuumed.'**
+  String get flocculantDesc;
+
+  /// No description provided for @cloroCalcDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Chlorine is the most common disinfectant for pools. Maintaining proper levels (1-3 ppm) is essential to kill bacteria and prevent algae. High bather load or sunlight consume chlorine quickly.'**
+  String get cloroCalcDescription;
+
+  /// No description provided for @initialCl.
+  ///
+  /// In en, this message translates to:
+  /// **'Current Chlorine (ppm)'**
+  String get initialCl;
+
+  /// No description provided for @targetCl.
+  ///
+  /// In en, this message translates to:
+  /// **'Target Chlorine (ppm)'**
+  String get targetCl;
+
+  /// No description provided for @bathers.
+  ///
+  /// In en, this message translates to:
+  /// **'Bathers today'**
+  String get bathers;
+
+  /// No description provided for @productTricloroGranulado.
+  ///
+  /// In en, this message translates to:
+  /// **'Granular Trichlor'**
+  String get productTricloroGranulado;
+
+  /// No description provided for @productDicloro.
+  ///
+  /// In en, this message translates to:
+  /// **'Dichlor (Granular or powder)'**
+  String get productDicloro;
+
+  /// No description provided for @productHipocloritoCalcio.
+  ///
+  /// In en, this message translates to:
+  /// **'Calcium Hypochlorite (Granular or powder)'**
+  String get productHipocloritoCalcio;
+
+  /// No description provided for @productCloroLiquido.
+  ///
+  /// In en, this message translates to:
+  /// **'Liquid Chlorine (Bleach or lye)'**
+  String get productCloroLiquido;
+
+  /// No description provided for @productTricloroTabletas.
+  ///
+  /// In en, this message translates to:
+  /// **'Trichlor Tablets (Weekly)'**
+  String get productTricloroTabletas;
+
+  /// No description provided for @concentration.
+  ///
+  /// In en, this message translates to:
+  /// **'Concentration (%)'**
+  String get concentration;
+
+  /// No description provided for @tabletSize.
+  ///
+  /// In en, this message translates to:
+  /// **'Grams per tablet'**
+  String get tabletSize;
+
+  /// No description provided for @resultTablets.
+  ///
+  /// In en, this message translates to:
+  /// **'Tablets to add'**
+  String get resultTablets;
+
+  /// No description provided for @resultLiters.
+  ///
+  /// In en, this message translates to:
+  /// **'Liters to add'**
+  String get resultLiters;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {
