@@ -43,7 +43,12 @@ class PhCalculatorService {
     if (alkalinity < 0 ){
       throw ArgumentError('La alcalinidad no puede ser negativa.');
     }
-    if (config == null) return 0;
+    if(config == null){
+      throw ArgumentError('Producto no encontrado.');
+    }
+    if(currentPh < 0 || targetPh < 0 ){
+      throw ArgumentError('Los ph no pueden ser negativos.');
+    }
 
     // Diferencia absoluta (sirve para incrementos y decrementos)
     final difference = (targetPh - currentPh).abs();
