@@ -7,7 +7,12 @@ class AlkalinityCalculatorService {
     required double currentAlkalinity,
     required double targetAlkalinity,
   }) {
-    if (targetAlkalinity <= currentAlkalinity) return 0;
+    if (volumeLiters <= 0 ) {
+      throw ArgumentError('El volumen debe ser mayor a cero.');
+    }
+    if (targetAlkalinity <= currentAlkalinity) {
+      throw ArgumentError('La alcalinidad debe ser mayor a la actual.');
+    }
 
     final volumeM3 = volumeLiters / 1000;
     final delta = targetAlkalinity - currentAlkalinity;

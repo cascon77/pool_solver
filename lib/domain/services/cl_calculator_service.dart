@@ -6,7 +6,15 @@ class ClCalculatorService {
     int bathers = 0,
   }) {
     double delta = targetCl - currentCl;
-    if (delta <= 0) return 0;
+    if (delta <= 0) {
+      throw ArgumentError('La concentración debe ser mayor a la actual.');
+    }
+    if (liters <= 0) {
+      throw ArgumentError('El volumen debe ser mayor a cero.');
+    }
+    if (bathers < 0) {
+      throw ArgumentError('El número de bathers no puede ser negativo.');
+    }
     return (liters * delta * 0.001111) + (bathers * 3);
   }
 
@@ -17,7 +25,15 @@ class ClCalculatorService {
     int bathers = 0,
   }) {
     double delta = targetCl - currentCl;
-    if (delta <= 0) return 0;
+    if (delta <= 0) {
+      throw ArgumentError('La concentración debe ser mayor a la actual.');
+    }
+    if (liters <= 0) {
+      throw ArgumentError('El volumen debe ser mayor a cero.');
+    }
+    if (bathers < 0) {
+      throw ArgumentError('El número de bathers no puede ser negativo.');
+    }
     return (liters * delta * 0.001818) + (bathers * 4);
   }
 
@@ -28,7 +44,15 @@ class ClCalculatorService {
     int bathers = 0,
   }) {
     double delta = targetCl - currentCl;
-    if (delta <= 0) return 0;
+    if (delta <= 0) {
+      throw ArgumentError('La concentración debe ser mayor a la actual.');
+    }
+    if (liters <= 0) {
+      throw ArgumentError('El volumen debe ser mayor a cero.');
+    }
+    if (bathers < 0) {
+      throw ArgumentError('El número de bathers no puede ser negativo.');
+    }
     return (liters * delta * 0.001493) + (bathers * 4);
   }
 
@@ -40,7 +64,15 @@ class ClCalculatorService {
     int bathers = 0,
   }) {
     double delta = targetCl - currentCl;
-    if (delta <= 0) return 0;
+    if (delta <= 0) {
+      throw ArgumentError('La concentración debe ser mayor a la actual.');
+    }
+    if (liters <= 0) {
+      throw ArgumentError('El volumen debe ser mayor a cero.');
+    }
+    if (bathers < 0) {
+      throw ArgumentError('El número de bathers no puede ser negativo.');
+    }
     double litersNeeded = (liters * delta * 0.00001) / (concentration / 10);
     return litersNeeded + (bathers * 0.03);
   }
@@ -50,6 +82,12 @@ class ClCalculatorService {
     required int tabletGrams,
     int bathers = 0,
   }) {
+    if (liters <= 0) {
+      throw ArgumentError('El volumen debe ser mayor a cero.');
+    }
+    if (bathers < 0) {
+      throw ArgumentError('El número de bathers no puede ser negativo.');
+    }
     double gramsWeek = (liters * 0.012445) + (bathers * 21);
     return gramsWeek / tabletGrams;
   }
