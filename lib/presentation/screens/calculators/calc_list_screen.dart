@@ -34,21 +34,21 @@ class CalcListScreen extends StatelessWidget {
         'route': Routes.calcAlkalinity,
         'icon': Icons.balance,
         'color': Colors.teal,
-        'desc': l10n.alkalinityDesc.split('.').first + '.',
+        'desc': '${l10n.alkalinityDesc.split('.').first}.',
       },
       {
         'title': 'Floculante',
         'route': Routes.calcFlocculant,
         'icon': Icons.auto_fix_high,
         'color': Colors.cyan,
-        'desc': l10n.flocculantDesc.split('.').first + '.',
+        'desc': '${l10n.flocculantDesc.split('.').first}.',
       },
       {
         'title': l10n.chloramines,
         'route': Routes.calcChloramines,
         'icon': Icons.warning_amber_rounded,
         'color': Colors.orange,
-        'desc': l10n.chloraminesDesc.split('.').first + '.',
+        'desc': '${l10n.chloraminesDesc.split('.').first}.',
       },
     ];
 

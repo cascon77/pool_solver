@@ -37,6 +37,12 @@ class PhCalculatorService {
   }) {
     final config = products[productKey];
 
+    if (volumeLiters <= 0) {
+      throw ArgumentError('El volumen debe ser mayor a cero.');
+    }
+    if (alkalinity < 0 ){
+      throw ArgumentError('La alcalinidad no puede ser negativa.');
+    }
     if (config == null) return 0;
 
     // Diferencia absoluta (sirve para incrementos y decrementos)

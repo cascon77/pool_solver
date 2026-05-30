@@ -116,7 +116,7 @@ class _CalcFlocculantScreenState extends State<CalcFlocculantScreen> {
         decoration: BoxDecoration(
           color: isDark ? AppColors.surfaceDark : Colors.grey[100],
           borderRadius: BorderRadius.circular(27),
-          border: Border.all(color: isDark ? Colors.white10 : Colors.black.withOpacity(0.05)),
+          border: Border.all(color: isDark ? Colors.white10 : Colors.black.withValues(alpha: 0.05)),
         ),
         child: Stack(
           children: [
@@ -132,7 +132,7 @@ class _CalcFlocculantScreenState extends State<CalcFlocculantScreen> {
                   borderRadius: BorderRadius.circular(23),
                   boxShadow: [
                     BoxShadow(
-                      color: AppColors.primaryAccent.withOpacity(0.3),
+                      color: AppColors.primaryAccent.withValues(alpha: 0.3),
                       blurRadius: 4,
                       offset: const Offset(0, 2),
                     ),
