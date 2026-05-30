@@ -4,341 +4,190 @@ import 'package:pool_solution/domain/services/ph_calculator_service.dart';
 void main() {
   final service = PhCalculatorService();
 
-  group('Test start, calculo de ph con bicarbonato', () {
-    test('Todo correcto', () {
-      final result = service.calculate(
-        volumeLiters: 56000,
-        currentPh: 3.0,
-        targetPh: 7.0,
-        alkalinity: 100,
-        productKey: 'bicarbonate',
-      );
-      expect(result, 21996.8);
-    });
-    test('Debería lanzar ArgumentError si el volumen es 0 o negativo', () {
-      expect(
-        () => service.calculate(
-          volumeLiters: -56000,
-          currentPh: 3.0,
-          targetPh: 7.0,
-          alkalinity: 100,
-          productKey: 'bicarbonate',
-        ),
-        throwsArgumentError,
-      );
-      expect(
-        () => service.calculate(
-          volumeLiters: 0,
-          currentPh: 3.0,
-          targetPh: 7.0,
-          alkalinity: 100,
-          productKey: 'bicarbonate',
-        ),
-        throwsArgumentError,
-      );
-    });
-    test('Debería lanzar ArgumentError si la alcalinidad negativa', () {
-      expect(
-        () => service.calculate(
-          volumeLiters: 56000,
-          currentPh: 3.0,
-          targetPh: 7.0,
-          alkalinity: -10,
-          productKey: 'bicarbonate',
-        ),
-        throwsArgumentError,
-      );
-    });
-    test('Alcalinidad con valor 0', () {
-      final resultado = service.calculate(
-        volumeLiters: 56000,
-        currentPh: 3.0,
-        targetPh: 7.0,
-        alkalinity: 0,
-        productKey: 'bicarbonate',
-      );
-      expect(resultado, 21996.8);
-    });
-    test('Deberia lanzar ArgumentError si el ph es negativo', () {
-      expect(
-        () => service.calculate(
-          volumeLiters: 56000,
-          currentPh: -3.0,
-          targetPh: 7.0,
-          alkalinity: 100,
-          productKey: 'bicarbonate',
-        ),
-        throwsArgumentError,
-      );
-      expect(
-        () => service.calculate(
-          volumeLiters: 56000,
-          currentPh: 3.0,
-          targetPh: -7.0,
-          alkalinity: 100,
-          productKey: 'bicarbonate',
-        ),
-        throwsArgumentError,
-      );
-    });
-    test('Deberia lanzar ArgumentError si reduces el ph y con bicarbonato', () {
-      expect(
-        () => service.calculate(
-          volumeLiters: 56000,
-          currentPh: 3.0,
-          targetPh: 2.0,
-          alkalinity: 100,
-          productKey: 'bicarbonate',
-        ),
-        throwsArgumentError,
-      );
-    });
-  });
+  group('PhCalculatorService - Cálculos Válidos', () {
+    const double volume = 56000.0;
+    const double alk = 100.0;
 
-  group('Test start, calculo de ph con carbonato', () {
-    test('Todo correcto', () {
+    test('Bicarbonato (factor: 0.0982, no usa densidad)', () {
       final result = service.calculate(
-        volumeLiters: 56000,
-        currentPh: 3.0,
-        targetPh: 7.0,
-        alkalinity: 100,
-        productKey: 'carbonate',
-      );
-      expect(result, 21996.8);
-    });
-    test('Debería lanzar ArgumentError si el volumen es 0 o negativo', () {
-      expect(
-        () => service.calculate(
-          volumeLiters: -56000,
-          currentPh: 3.0,
-          targetPh: 7.0,
-          alkalinity: 100,
-          productKey: 'carbonate',
-        ),
-        throwsArgumentError,
-      );
-      expect(
-        () => service.calculate(
-          volumeLiters: 0,
-          currentPh: 3.0,
-          targetPh: 7.0,
-          alkalinity: 100,
-          productKey: 'carbonate',
-        ),
-        throwsArgumentError,
-      );
-    });
-    test('Debería lanzar ArgumentError si la alcalinidad negativa', () {
-      expect(
-        () => service.calculate(
-          volumeLiters: 56000,
-          currentPh: 3.0,
-          targetPh: 7.0,
-          alkalinity: -10,
-          productKey: 'carbonate',
-        ),
-        throwsArgumentError,
-      );
-    });
-    test('Alcalinidad con valor 0', () {
-      final resultado = service.calculate(
-        volumeLiters: 56000,
-        currentPh: 3.0,
-        targetPh: 7.0,
-        alkalinity: 0,
-        productKey: 'carbonate',
-      );
-      expect(resultado, 21996.8);
-    });
-    test('Deberia lanzar ArgumentError si el ph es negativo', () {
-      expect(
-        () => service.calculate(
-          volumeLiters: 56000,
-          currentPh: -3.0,
-          targetPh: 7.0,
-          alkalinity: 100,
-          productKey: 'carbonate',
-        ),
-        throwsArgumentError,
-      );
-      expect(
-        () => service.calculate(
-          volumeLiters: 56000,
-          currentPh: 3.0,
-          targetPh: -7.0,
-          alkalinity: 100,
-          productKey: 'carbonate',
-        ),
-        throwsArgumentError,
-      );
-    });
-    test('Deberia lanzar ArgumentError si reduces el ph y con bicarbonato', () {
-      expect(
-        () => service.calculate(
-          volumeLiters: 56000,
-          currentPh: 3.0,
-          targetPh: 2.0,
-          alkalinity: 100,
-          productKey: 'carbonate',
-        ),
-        throwsArgumentError,
-      );
-    });
-  });
-
-  group('Test start, calculo de ph con caustic', () {
-    test('Todo correcto', () {
-      final result = service.calculate(
-        volumeLiters: 56000,
-        currentPh: 3.0,
-        targetPh: 7.0,
-        alkalinity: 100,
-        productKey: 'caustic',
-      );
-      expect(result, 21996.8);
-    });
-    test('Debería lanzar ArgumentError si el volumen es 0 o negativo', () {
-      expect(
-        () => service.calculate(
-          volumeLiters: -56000,
-          currentPh: 3.0,
-          targetPh: 7.0,
-          alkalinity: 100,
-          productKey: 'caustic',
-        ),
-        throwsArgumentError,
-      );
-      expect(
-        () => service.calculate(
-          volumeLiters: 0,
-          currentPh: 3.0,
-          targetPh: 7.0,
-          alkalinity: 100,
-          productKey: 'caustic',
-        ),
-        throwsArgumentError,
-      );
-    });
-    test('Debería lanzar ArgumentError si la alcalinidad negativa', () {
-      expect(
-        () => service.calculate(
-          volumeLiters: 56000,
-          currentPh: 3.0,
-          targetPh: 7.0,
-          alkalinity: -10,
-          productKey: 'caustic',
-        ),
-        throwsArgumentError,
-      );
-    });
-    test('Alcalinidad con valor 0', () {
-      final resultado = service.calculate(
-        volumeLiters: 56000,
-        currentPh: 3.0,
-        targetPh: 7.0,
-        alkalinity: 0,
-        productKey: 'caustic',
-      );
-      expect(resultado, 21996.8);
-    });
-    test('Deberia lanzar ArgumentError si el ph es negativo', () {
-      expect(
-        () => service.calculate(
-          volumeLiters: 56000,
-          currentPh: -3.0,
-          targetPh: 7.0,
-          alkalinity: 100,
-          productKey: 'caustic',
-        ),
-        throwsArgumentError,
-      );
-      expect(
-        () => service.calculate(
-          volumeLiters: 56000,
-          currentPh: 3.0,
-          targetPh: -7.0,
-          alkalinity: 100,
-          productKey: 'caustic',
-        ),
-        throwsArgumentError,
-      );
-    });
-    test('Deberia lanzar ArgumentError si reduces el ph y con bicarbonato', () {
-      expect(
-        () => service.calculate(
-          volumeLiters: 56000,
-          currentPh: 3.0,
-          targetPh: 2.0,
-          alkalinity: 100,
-          productKey: 'caustic',
-        ),
-        throwsArgumentError,
-      );
-    });
-  });
-  group('Test start, calculo de ph con reducer', () {
-    test('Todo correcto', () {
-      final result = service.calculate(
-        volumeLiters: 56000,
+        volumeLiters: volume,
         currentPh: 7.0,
-        targetPh: 3.0,
-        alkalinity: 100,
+        targetPh: 7.4,
+        alkalinity: alk,
+        productKey: 'bicarbonate',
+      );
+      // 0.0982 * 56000 * 0.4 * 1.0 = 2199.68
+      expect(result, closeTo(2199.68, 0.01));
+    });
+
+    test('Carbonato (factor: 0.04117, usa densidad)', () {
+      final result = service.calculate(
+        volumeLiters: volume,
+        currentPh: 7.0,
+        targetPh: 7.4,
+        alkalinity: alk,
+        productKey: 'carbonate',
+      );
+      // multiplicador de densidad = 100 / 80 = 1.25
+      // 0.04117 * 56000 * 0.4 * 1.25 = 1152.76
+      expect(result, closeTo(1152.76, 0.01));
+    });
+
+    test('Sosa Cáustica (factor: 0.03049, usa densidad)', () {
+      final result = service.calculate(
+        volumeLiters: volume,
+        currentPh: 7.0,
+        targetPh: 7.4,
+        alkalinity: alk,
+        productKey: 'caustic',
+      );
+      // 0.03049 * 56000 * 0.4 * 1.25 = 853.72
+      expect(result, closeTo(853.72, 0.01));
+    });
+
+    test('Reductor (factor: 0.021335, usa densidad)', () {
+      final result = service.calculate(
+        volumeLiters: volume,
+        currentPh: 7.6,
+        targetPh: 7.2,
+        alkalinity: alk,
         productKey: 'reducer',
       );
-      expect(result, 21996.8);
+      // 0.021335 * 56000 * 0.4 * 1.25 = 597.38
+      expect(result, closeTo(597.38, 0.01));
     });
-    test('Debería lanzar ArgumentError si el volumen es negativo', () {
+
+    test('Alcalinidad 0 con producto basado en densidad', () {
+      final result = service.calculate(
+        volumeLiters: volume,
+        currentPh: 7.6,
+        targetPh: 7.2,
+        alkalinity: 0,
+        productKey: 'reducer',
+      );
+      // multiplicador de densidad = 0 / 80 = 0
+      expect(result, 0.0);
+    });
+
+    test('Una diferencia de 0 debería devolver 0', () {
+      final result = service.calculate(
+        volumeLiters: volume,
+        currentPh: 7.4,
+        targetPh: 7.4,
+        alkalinity: alk,
+        productKey: 'bicarbonate',
+      );
+      expect(result, 0.0);
+    });
+  });
+
+  group('PhCalculatorService - Validaciones', () {
+    test('Debe lanzar ArgumentError si el volumen es <= 0', () {
       expect(
         () => service.calculate(
-          volumeLiters: -56000,
+          volumeLiters: 0,
           currentPh: 7.0,
-          targetPh: 3.0,
+          targetPh: 7.4,
+          alkalinity: 100,
+          productKey: 'bicarbonate',
+        ),
+        throwsArgumentError,
+      );
+      expect(
+        () => service.calculate(
+          volumeLiters: -100,
+          currentPh: 7.0,
+          targetPh: 7.4,
+          alkalinity: 100,
+          productKey: 'bicarbonate',
+        ),
+        throwsArgumentError,
+      );
+    });
+
+    test('Debe lanzar ArgumentError si la alcalinidad es negativa', () {
+      expect(
+        () => service.calculate(
+          volumeLiters: 1000,
+          currentPh: 7.0,
+          targetPh: 7.4,
+          alkalinity: -1,
+          productKey: 'bicarbonate',
+        ),
+        throwsArgumentError,
+      );
+    });
+
+    test('Debe lanzar ArgumentError para valores de pH negativos', () {
+      expect(
+        () => service.calculate(
+          volumeLiters: 1000,
+          currentPh: -1.0,
+          targetPh: 7.4,
+          alkalinity: 100,
+          productKey: 'bicarbonate',
+        ),
+        throwsArgumentError,
+      );
+      expect(
+        () => service.calculate(
+          volumeLiters: 1000,
+          currentPh: 7.0,
+          targetPh: -1.0,
+          alkalinity: 100,
+          productKey: 'bicarbonate',
+        ),
+        throwsArgumentError,
+      );
+    });
+
+    test('Debe lanzar ArgumentError para un producto desconocido', () {
+      expect(
+        () => service.calculate(
+          volumeLiters: 1000,
+          currentPh: 7.0,
+          targetPh: 7.4,
+          alkalinity: 100,
+          productKey: 'magic_powder',
+        ),
+        throwsArgumentError,
+      );
+    });
+
+    test('Debe lanzar ArgumentError al usar reductor para aumentar el pH', () {
+      expect(
+        () => service.calculate(
+          volumeLiters: 1000,
+          currentPh: 7.0,
+          targetPh: 7.5,
           alkalinity: 100,
           productKey: 'reducer',
         ),
         throwsArgumentError,
       );
     });
-    test('Debería lanzar ArgumentError si la alcalinidad negativa', () {
+
+    test('Debe lanzar ArgumentError al usar un incrementador para disminuir el pH', () {
       expect(
         () => service.calculate(
-          volumeLiters: 56000,
-          currentPh: 7.0,
-          targetPh: 3.0,
-          alkalinity: -10,
-          productKey: 'reducer',
+          volumeLiters: 1000,
+          currentPh: 7.5,
+          targetPh: 7.0,
+          alkalinity: 100,
+          productKey: 'bicarbonate',
         ),
         throwsArgumentError,
       );
-    });
-    test(
-      'Deberia lanzar ArgumentError si se utiliza el reductor para aumentar ph',
-      () {
-        expect(
-          () => service.calculate(
-            volumeLiters: 56000,
-            currentPh: 7.0,
-            targetPh: 8.0,
-            alkalinity: 100,
-            productKey: 'reducer',
-          ),
-          throwsArgumentError,
-        );
-      },
-    );
-    group('producto no existe', (){
-      test('Deberia lanzar ArgumentError si el producto no existe', () {
-        expect(
-              () => service.calculate(
-            volumeLiters: 56000,
-            currentPh: 3.0,
-            targetPh: 7.0,
-            alkalinity: 100,
-            productKey: 'no existo',
-          ),
-          throwsArgumentError,
-        );
-      });
+      expect(
+        () => service.calculate(
+          volumeLiters: 1000,
+          currentPh: 7.5,
+          targetPh: 7.0,
+          alkalinity: 100,
+          productKey: 'carbonate',
+        ),
+        throwsArgumentError,
+      );
     });
   });
 }
