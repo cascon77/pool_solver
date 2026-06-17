@@ -100,6 +100,7 @@ class Treatments extends Table {
 ])
 class AppDatabase extends _$AppDatabase {
   AppDatabase() : super(_openConnection());
+  AppDatabase.executor(QueryExecutor e) : super(e);
 
   @override
   int get schemaVersion => 5;
